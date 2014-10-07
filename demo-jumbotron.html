@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/icomoon.css"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/datepicker3.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/timepicker.css">
+    <link rel="stylesheet" type="text/css" id="switch-css" class="switch" href="">
+    <script src="javascripts/jquery-1.11.1.min.js"></script>
+    <script src="javascripts/jquerycookie.js"></script>
+    <script>
+      if($.cookie("css")) {
+           $(".switch[rel='stylesheet']").attr("href",$.cookie("css"));
+          }
+       $(document).ready(function() { 
+        console.log($.cookie("css"));
+
+          $("#theme-blue").click(function() { 
+             $(".switch[rel='stylesheet']").attr("href",$(this).attr('rel'));
+             $.removeCookie('css', path, { path: '/' }); // => true
+             var path = $(this).attr('rel')
+             $.cookie("css", path , { expires: 7, path: '/' });
+             console.log($.cookie("css"));
+             return false;
+          });
+          $("#theme-hi-con").click(function() { 
+             $(".switch[rel='stylesheet']").attr("href",$(this).attr('rel'));
+             $.removeCookie('css', path, { path: '/' }); // => true
+             var path = $(this).attr('rel')
+             $.cookie("css", path , { expires: 7, path: '/' });
+             console.log($.cookie("css"));
+             return false;
+          });
+          $("#theme-default").click(function() { 
+             $(".switch[rel='stylesheet']").attr("href",$(this).attr('rel'));
+             $.removeCookie('css', path, { path: '/' }); // => true
+             var path = $(this).attr('rel')
+             $.cookie("css", path , { expires: 7, path: '/' });
+             console.log($.cookie("css"));
+             return false;
+          });
+       });
+    </script>
+    <!-- Custom styles -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">home</a></li>
+            <li><a href="page2.html">page2</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Demo pages <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="demo-jumbotron.html">Demo-Jumbotron</a></li>
+                <li><a href="demo-grids.html">Demo-Grid system</a></li>
+                <li><a href="demo-dashboard.html">Demo-Dashboard</a></li>
+                <li class="divider"></li>
+                <li><a href="quadex/login.html">Quadex Login</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Preview a theme <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu nav" role="menu">
+                <li id="theme-blue" rel="stylesheets/themes/blue.css"><a href="#">Blue</a></li>
+                <li id="theme-hi-con" rel="stylesheets/themes/hi-contrast.css"><a href="#">High contrast</a></li>
+                <li id="theme-default" rel=""><a href="#">Return to default</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- /. NAV BAR -->
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="javascripts/bootstrap.js"></script>
+  </body>
+</html>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UIUX Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/icomoon.css"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/datepicker3.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/timepicker.css">
+    <link rel="stylesheet" type="text/css" id="switch-css" class="switch" href="">
+    <script src="javascripts/jquery-1.11.1.min.js"></script>
+    <script src="javascripts/jquerycookie.js"></script>
+    <script>
+      if($.cookie("css")) {
+           $(".switch[rel='stylesheet']").attr("href",$.cookie("css"));
+          }
+       $(document).ready(function() { 
+        console.log($.cookie("css"));
+
+          $("#theme-blue").click(function() { 
+             $(".switch[rel='stylesheet']").attr("href",$(this).attr('rel'));
+             $.removeCookie('css', path, { path: '/' }); // => true
+             var path = $(this).attr('rel')
+             $.cookie("css", path , { expires: 7, path: '/' });
+             console.log($.cookie("css"));
+             return false;
+          });
+          $("#theme-hi-con").click(function() { 
+             $(".switch[rel='stylesheet']").attr("href",$(this).attr('rel'));
+             $.removeCookie('css', path, { path: '/' }); // => true
+             var path = $(this).attr('rel')
+             $.cookie("css", path , { expires: 7, path: '/' });
+             console.log($.cookie("css"));
+             return false;
+          });
+          $("#theme-default").click(function() { 
+             $(".switch[rel='stylesheet']").attr("href",$(this).attr('rel'));
+             $.removeCookie('css', path, { path: '/' }); // => true
+             var path = $(this).attr('rel')
+             $.cookie("css", path , { expires: 7, path: '/' });
+             console.log($.cookie("css"));
+             return false;
+          });
+       });
+    </script>
+    <!-- Custom styles -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="javascripts/respond.min.js"></script>
+    <![endif]-->
+    
+  </head>
+  <body data-spy="scroll" data-target="#spymenu" id="top">
+   <!-- NAV BAR -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">home</a></li>
+            <li><a href="page2.html">page2</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Demo pages <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="demo-jumbotron.html">Demo-Jumbotron</a></li>
+                <li><a href="demo-grids.html">Demo-Grid system</a></li>
+                <li><a href="demo-dashboard.html">Demo-Dashboard</a></li>
+                <li class="divider"></li>
+                <li><a href="quadex/login.html">Quadex Login</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Preview a theme <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu nav" role="menu">
+                <li id="theme-blue" rel="stylesheets/themes/blue.css"><a href="#">Blue</a></li>
+                <li id="theme-hi-con" rel="stylesheets/themes/hi-contrast.css"><a href="#">High contrast</a></li>
+                <li id="theme-default" rel=""><a href="#">Return to default</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- /. NAV BAR -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12" id="breadcrumbs">
+                      <h2>Breadcrumbs</h2><hr>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod enim a elit placerat aliquam. Etiam luctus magna ac risus accumsan viverra. Nam vel arcu nec sapien dictum lobortis vitae a turpis. Sed magna diam, egestas ac ornare et, vulputate sit amet lectus. Nunc vel ante tellus. Sed mi lorem, tincidunt in tincidunt a, varius ut risus. Nam eu elementum eros. Donec adipiscing sagittis bibendum. Curabitur nec facilisis lorem.</p>
+                      <div class="example">
+                        <ol class="breadcrumb">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Library</a></li>
+                          <li class="active">Data</li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="col-xs-12" id="typography">
+                      <h2>Typography</h2><hr>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod enim a elit placerat aliquam. Etiam luctus magna ac risus accumsan viverra. Nam vel arcu nec sapien dictum lobortis vitae a turpis. Sed magna diam, egestas ac ornare et, vulputate sit amet lectus. Nunc vel ante tellus. Sed mi lorem, tincidunt in tincidunt a, varius ut risus. Nam eu elementum eros. Donec adipiscing sagittis bibendum. Curabitur nec facilisis lorem.</p>
+                      <h3>Heading</h3>
+                      <ul>
+                        <li>Heading rule 1</li>
+                        <li>Heading rule 2</li>
+                        <li>Heading rule 3</li>
+                      </ul>
+                      <div class="example">
+                        <div class="ribbon">Recommended</div>
+                        <h1>h1. 36px heading <small>Secondary text 23px</small></h1>
+                        <h2>h2. 30px heading <small>Secondary text 20px</small></h2>
+                        <h3>h3. 24px heading <small>Secondary text 16px</small></h3>
+                        <h4>h4. 18px heading <small>Secondary text 14px</small></h4>
+                        <h5>h5. 14px heading <small>Secondary text 11px</small></h5>
+                        <h6>h6. 13px heading <small>Secondary text 9px</small></h6>
+                      </div>  
+                    </div>
+                    <div class="col-xs-12">
+                      <h3>Lead &amp; body copy</h3>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div Class="example">
+                        <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+                        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                      </div>
+                    </div>
+                    <div class="col-xs-12" id="colors">
+                      <h2>Colour</h2><hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div class="example">
+                        <div class="row text-center">
+                          <div class="col-xs-2 col-xs-offset-1">
+                            <h4>Text</h4>
+                            <div class="swatch swatch-text-color"></div>
+                            <p><strong>#0B0C0C</strong></p>
+                            <p>text colour</p>
+                            <div class="swatch swatch-sec-text-color"></div>
+                            <p><strong>#6C6C6C</strong></p>
+                            <p>secondary text colour</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4>Links</h4>
+                            <div class="swatch swatch-link-color"></div>
+                            <p><strong>#005EA5</strong></p>
+                            <p>link colour</p>
+                            <div class="swatch swatch-link-hover-color"></div>
+                            <p><strong>#2E8ACA</strong></p>
+                            <p>link hover colour</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4>Backgrounds</h4>
+                            <div class="swatch swatch-border-color"></div>
+                            <p><strong>#BFC1C3</strong></p>
+                            <p>border colour</p>
+                            <div class="swatch swatch-panel-color"></div>
+                            <p><strong>#DEE00E2</strong></p>
+                            <p>panel colour</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4>Buttons</h4>
+                            <div class="swatch swatch-button-color"></div>
+                            <p><strong>#00823B</strong></p>
+                            <p>button coour</p>
+                            <div class="swatch swatch-button-hover-color"></div>
+                            <p><strong>#006435</strong></p>
+                            <p>button hover colour</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4>Focus</h4>
+                            <div class="swatch swatch-focus-color"></div>
+                            <p><strong>#FFBF47</strong></p>
+                            <p>focus colour</p>
+                          </div>
+                        </div>
+                      </div>
+                      <h3>Capita Colour Palette</h3>
+                      <div class="example">
+                        <div class="row text-center">
+                          <div class="col-xs-2 col-xs-offset-1">
+                            <h4>Primary Colours</h4>
+                            <div class="swatch swatch-light-blue"></div>
+                            <p><strong>#00A1C1</strong></p>
+                            <p>Light Blue</p>
+                            <div class="swatch swatch-dark-blue"></div>
+                            <p><strong>#04476F</strong></p>
+                            <p>Dark Blue</p>
+                            <div class="swatch swatch-dark-grey"></div>
+                            <p><strong>#505253</strong></p>
+                            <p>Dark Grey</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4>Secondary Colours</h4>
+                            <div class="swatch swatch-purple"></div>
+                            <p><strong>#4F2683</strong></p>
+                            <p>Purple</p>
+                            <div class="swatch swatch-deep-green"></div>
+                            <p><strong>#008566</strong></p>
+                            <p>Deep Green</p>
+                            <div class="swatch swatch-orange"></div>
+                            <p><strong>#FF5800</strong></p>
+                            <p>Orange</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4><br /><br /></h4>
+                            <div class="swatch swatch-raspberry"></div>
+                            <p><strong>#CA005D</strong></p>
+                            <p>Raspberry</p>
+                            <div class="swatch swatch-deep-pink"></div>
+                            <p><strong>#830051</strong></p>
+                            <p>Deep Pink</p>
+                            <div class="swatch swatch-lavendar"></div>
+                            <p><strong>#6773B6</strong></p>
+                            <p>Lavendar</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4>Supporting Colours</h4>
+                            <div class="swatch swatch-plain-text"></div>
+                            <p><strong>#505253</strong></p>
+                            <p>Plain Text</p>
+                            <div class="swatch swatch-navigation"></div>
+                            <p><strong>#737373</strong></p>
+                            <p>Navigation</p>
+                            <div class="swatch swatch-plain-tabs"></div>
+                            <p><strong>#F3F3F3</strong></p>
+                            <p>Plain Tabs</p>
+                          </div>
+                          <div class="col-xs-2">
+                            <h4>Non-text Colours</h4>
+                            <div class="swatch swatch-bright-green"></div>
+                            <p><strong>#7AB800</strong></p>
+                            <p>Bright Green</p>
+                            <div class="swatch swatch-gold"></div>
+                            <p><strong>#F0AB00</strong></p>
+                            <p>Gold</p>
+                            <div class="swatch swatch-sky-blue"></div>
+                            <p><strong>#A1C6CF</strong></p>
+                            <p>Sky Blue</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12" id="tabs">
+                      <h2>Toggleable tabs</h2><hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div class="example">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="active"><a href="#home" role="tab" data-toggle="tab">Home</a></li>
+                          <li><a href="#profile" role="tab" data-toggle="tab">Profile</a></li>
+                          <li><a href="#messages" role="tab" data-toggle="tab">Messages</a></li>
+                          <li><a href="#settings" role="tab" data-toggle="tab">Settings</a></li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="home">
+                            <h4>TAB 1</h4>
+                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                          </div>
+                          <div class="tab-pane" id="profile">
+                            <h4>TAB 2</h4>
+                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                          </div>
+                          <div class="tab-pane" id="messages">
+                            <h4>TAB 3</h4>
+                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                          </div>
+                          <div class="tab-pane" id="settings">
+                            <h4>TAB 4</h4>
+                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p></div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12" id="alerts">
+                      <h2>Alerts</h2><hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div class="example">
+                        <div class="alert alert-success" role="alert">
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <strong>Success!</strong> This is an alert
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <strong>Some information</strong> This is an alert
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <strong>Warning!</strong> This is an alert
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                          <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                          <strong>Danger!</strong> This is an alert
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xs-12" id="tables">
+                      <h2>Tables</h2><hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <h3>Basic table</h3>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div class="example">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th>Column 1</th>
+                              <th>Column 2</th>
+                              <th>Column 3</th>
+                              <th>Column 4</th>
+                              <th>Column 5</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Row 1 Col 1</td>
+                              <td>Row 1 Col 2</td>
+                              <td>Row 1 Col 3</td>
+                              <td>Row 1 Col 4</td>
+                              <td>Row 1 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row2 Col 1</td>
+                              <td>Row2 Col 2</td>
+                              <td>Row2 Col 3</td>
+                              <td>Row2 Col 4</td>
+                              <td>Row2 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 3 Col 1</td>
+                              <td>Row 3 Col 2</td>
+                              <td>Row 3 Col 3</td>
+                              <td>Row 3 Col 4</td>
+                              <td>Row 3 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 4 Col 1</td>
+                              <td>Row 4 Col 2</td>
+                              <td>Row 4 Col 3</td>
+                              <td>Row 4 Col 4</td>
+                              <td>Row 4 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 5 Col 1</td>
+                              <td>Row 5 Col 2</td>
+                              <td>Row 5 Col 3</td>
+                              <td>Row 5 Col 4</td>
+                              <td>Row 5 Col 5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <h3>Striped rows</h3>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div class="example">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>Column 1</th>
+                              <th>Column 2</th>
+                              <th>Column 3</th>
+                              <th>Column 4</th>
+                              <th>Column 5</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Row 1 Col 1</td>
+                              <td>Row 1 Col 2</td>
+                              <td>Row 1 Col 3</td>
+                              <td>Row 1 Col 4</td>
+                              <td>Row 1 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row2 Col 1</td>
+                              <td>Row2 Col 2</td>
+                              <td>Row2 Col 3</td>
+                              <td>Row2 Col 4</td>
+                              <td>Row2 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 3 Col 1</td>
+                              <td>Row 3 Col 2</td>
+                              <td>Row 3 Col 3</td>
+                              <td>Row 3 Col 4</td>
+                              <td>Row 3 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 4 Col 1</td>
+                              <td>Row 4 Col 2</td>
+                              <td>Row 4 Col 3</td>
+                              <td>Row 4 Col 4</td>
+                              <td>Row 4 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 5 Col 1</td>
+                              <td>Row 5 Col 2</td>
+                              <td>Row 5 Col 3</td>
+                              <td>Row 5 Col 4</td>
+                              <td>Row 5 Col 5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <h3>Hover rows</h3>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div class="example">
+                        <table class="table table-hover">
+                          <thead>
+                            <tr>
+                              <th>Column 1</th>
+                              <th>Column 2</th>
+                              <th>Column 3</th>
+                              <th>Column 4</th>
+                              <th>Column 5</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Row 1 Col 1</td>
+                              <td>Row 1 Col 2</td>
+                              <td>Row 1 Col 3</td>
+                              <td>Row 1 Col 4</td>
+                              <td>Row 1 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row2 Col 1</td>
+                              <td>Row2 Col 2</td>
+                              <td>Row2 Col 3</td>
+                              <td>Row2 Col 4</td>
+                              <td>Row2 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 3 Col 1</td>
+                              <td>Row 3 Col 2</td>
+                              <td>Row 3 Col 3</td>
+                              <td>Row 3 Col 4</td>
+                              <td>Row 3 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 4 Col 1</td>
+                              <td>Row 4 Col 2</td>
+                              <td>Row 4 Col 3</td>
+                              <td>Row 4 Col 4</td>
+                              <td>Row 4 Col 5</td>
+                            </tr>
+                            <tr>
+                              <td>Row 5 Col 1</td>
+                              <td>Row 5 Col 2</td>
+                              <td>Row 5 Col 3</td>
+                              <td>Row 5 Col 4</td>
+                              <td>Row 5 Col 5</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!-- <div class="col-xs-12" id="timeline">
+                      <h2>Timeline</h2><hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <ul class="cbp_tmtimeline">
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>4/10/13</span> <span>18:30</span></time>
+                            <div class="icon-star4"></div>
+                            <div class="cbp_tmlabel">
+                              <div></div>
+                                <h2>Ricebean black-eyed pea</h2>
+                                <p>Winter purslane...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-11T12:04"><span>4/11/13</span> <span>12:04</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-screen"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>Greens radish arugula</h2>
+                                <p>Caulie dandelion maize...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-13 05:36"><span>4/13/13</span> <span>05:36</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-mail"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>Sprout garlic kohlrabi</h2>
+                                <p>Parsnip lotus root...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-15 13:15"><span>4/15/13</span> <span>13:15</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-phone"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>Watercress ricebean</h2>
+                                <p>Peanut gourd nori...</p>
+                            </div>
+                        </li>
+                        <li>
+                            <time class="cbp_tmtime" datetime="2013-04-16 21:30"><span>4/16/13</span> <span>21:30</span></time>
+                            <div class="cbp_tmicon cbp_tmicon-earth"></div>
+                            <div class="cbp_tmlabel">
+                                <h2>Courgette daikon</h2>
+                                <p>Parsley amaranth tigernut...</p>
+                            </div>
+                        </li>
+                      </ul>
+                    </div> -->
+                    <div class="col-xs-12" id="buttons">
+                      <h2>Buttons</h2><hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <h3>Default button size</h3>
+                      <div class="example">
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                      </div>
+                      <h3>Button size varieties</h3>
+                      <div class="example">
+                        <h4>Extra small <small>class="btn-xs"</small></h4>
+                        <button type="button" class="btn btn-xs btn-default">Default</button>
+                        <button type="button" class="btn btn-xs btn-primary">Primary</button>
+                        <button type="button" class="btn btn-xs btn-success">Success</button>
+                        <button type="button" class="btn btn-xs btn-info">Info</button>
+                        <button type="button" class="btn btn-xs btn-warning">Warning</button>
+                        <button type="button" class="btn btn-xs btn-danger">Danger</button>
+                        <button type="button" class="btn btn-xs btn-link">Link</button>
+                        <hr>
+                        <h4>Small <small>class="btn-sm"</small></h4>
+                        <button type="button" class="btn btn-sm btn-default">Default</button>
+                        <button type="button" class="btn btn-sm btn-primary">Primary</button>
+                        <button type="button" class="btn btn-sm btn-success">Success</button>
+                        <button type="button" class="btn btn-sm btn-info">Info</button>
+                        <button type="button" class="btn btn-sm btn-warning">Warning</button>
+                        <button type="button" class="btn btn-sm btn-danger">Danger</button>
+                        <button type="button" class="btn btn-sm btn-link">Link</button>
+                        <hr>
+                        <h4>Large <small>class="btn-lg"</small></h4>
+                        <button type="button" class="btn btn-lg btn-default">Default</button>
+                        <button type="button" class="btn btn-lg btn-primary">Primary</button>
+                        <button type="button" class="btn btn-lg btn-success">Success</button>
+                        <button type="button" class="btn btn-lg btn-info">Info</button>
+                        <button type="button" class="btn btn-lg btn-warning">Warning</button>
+                        <button type="button" class="btn btn-lg btn-danger">Danger</button>
+                        <button type="button" class="btn btn-lg btn-link">Link</button>
+                      </div>
+                    </div>
+                    <div class="col-xs-12" id="forms">
+                      <h2>Forms</h2><hr>
+                      <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+                      <div class="example">
+                        <form role="form">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <p class="help-block">Example block-level help text here.</p>
+                          </div>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> Check me out
+                            </label>
+                          </div>
+                          <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                      </div>
+                      <h3>Checkboxes and radios</h3>
+                      <div class="example">
+                        <h4>Default <small>(stacked)</small></h4>
+                        <form role="form">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="">
+                              Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                          </div>
+                          <div class="checkbox disabled">
+                            <label>
+                              <input type="checkbox" value="" disabled>
+                              Option two is disabled
+                            </label>
+                          </div>
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                              Option one is this and that&mdash;be sure to include why it's great
+                            </label>
+                          </div>
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                              Option two can be something else and selecting it will deselect option one
+                            </label>
+                          </div>
+                          <div class="radio disabled">
+                            <label>
+                              <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                              Option three is disabled
+                            </label>
+                          </div>
+                        </form>
+                        <br /><br />
+                        <h4>Inline checkboxes and radios</h4>
+                        <form role="form">
+                          <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                          </label>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                          </label>
+                          <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                          </label>
+                          <br /><br />
+                          <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                          </label>
+                        </form>                        
+                      </div>
+                      <h3>Selects</h3>
+                      <div class="example">                        
+                        <form role="form">
+                          <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </form>                        
+                      </div>
+                      <h3>Date and Time pickers</h3>
+                      <div class="example"> 
+                      <h3>Date picker</h3>                       
+                        <form role="form">
+                          <div class="input-group date">
+                            <input type="text" class="form-control">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                          </div>
+                        </form>                        
+                      </div>
+                      <div class="example">
+                      <h3>Time picker</h3>                       
+                        <form role="form">
+                          <div class="bootstrap-timepicker"/>
+                            <input id="timepicker" type="text"/>
+                          </div>
+                        </form>                        
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm">
+                <div data-spy="affix" data-offset-top="72" id="spymenu">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li class="active"><a href="#breadcrumbs">Breadcrumbs</a></li>
+                      <li><a href="#typography">Typography</a></li>
+                      <li><a href="#colors">Colours</a></li>
+                      <li><a href="#tabs">Tabs</a></li>
+                      <li><a href="#alerts">Alerts</a></li>
+                      <li><a href="#tables">Tables</a></li>
+                      <li><a href="#buttons">Buttons</a></li>
+                      <li><a href="#forms">Forms</a></li>
+                      
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+                
+    </div><!-- /. container-fluid -->
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="javascripts/bootstrap.js"></script>
+    <script src="javascripts/bootstrap-datepicker.js"></script>
+    <script src="javascripts/bootstrap-timepicker.js"></script>
+    
+    <script type="text/javascript">
+    // if($.cookie("css")) {
+    //    $(".switch[rel='stylesheet']").attr("href",$.cookie("css"));
+    //   }
+    $(document).ready(function() {
+
+      // $("#theme-blue").click(function() {
+      //     $(".switch[rel='stylesheet']").attr("href",$(this).attr('rel'));
+      //     $.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+      //     return false;
+      // });
+      // set cookie
+      // function setCookie(cname, cvalue, exdays) {
+      //     var d = new Date();
+      //     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      //     var expires = "expires="+d.toUTCString();
+      //     document.cookie = cname + "=" + cvalue + "; " + expires;
+      // }
+      // // read cookie
+      // function getCookie(cname) {
+      //     var name = cname + "=";
+      //     var ca = document.cookie.split(';');
+      //     for(var i=0; i<ca.length; i++) {
+      //         var c = ca[i];
+      //         while (c.charAt(0)==' ') c = c.substring(1);
+      //         if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+      //     }
+      //     return "";
+      // }
+      // // check cookie
+      // function checkCookie() {
+      //     var user = getCookie("css");
+      //     if (user != "") {
+      //         alert("stylesheets/themes/" + user + ".css");
+      //     } else {
+      //         user = prompt("Please enter your name:", "");
+      //         if (user != "" && user != null) {
+      //             setCookie("css", user, 365);
+      //         }
+      //     }
+      // }
+      // function checkCookie() {
+      //   var css = getCookie("css");
+      //   if (css != ""){
+      //     $(".switch[rel='stylesheet']").attr("href", css);
+      //   } else {
+
+      //   }
+      // }
+      // file = 'stylesheets/themes/blue.css';
+      // setCookie("css", file, 365);
+      // checkCookie();
+
+      // $('#theme-hi-con').click(function(e) {
+      //   file = 'stylesheets/themes/blue.css';
+      //   setCookie("css", file, 365);
+      //   checkCookie();
+      //   var x = document.cookie;
+      //   alert(x);
+      //   var linkSwitch = document.getElementById("switch-css").getAttribute("href");
+      //   console.log('The css file is = ' + linkSwitch);
+      //   e.preventDefault();
+      // });
+
+      
+      
+      
+      
+
+      // Theme switcher
+      // var linkSwitch = document.getElementById("switch-css").getAttribute("href");
+      // console.log('The css file is = ' + linkSwitch);
+
+      // $('#theme-hi-con').click(function(e) {
+      //   $(".switch[rel='stylesheet']").attr("href", "stylesheets/themes/hi-contrast.css");
+      //   var linkSwitch = document.getElementById("switch-css").getAttribute("href");
+      //   console.log('The css file is = ' + linkSwitch);
+      //   e.preventDefault();
+      // });
+      // $('#theme-blue').click(function(e) {
+      //   $(".switch[rel='stylesheet']").attr("href", "stylesheets/themes/blue.css");
+      //   var linkSwitch = document.getElementById("switch-css").getAttribute("href");
+      //   console.log('The css file is = ' + linkSwitch);
+      //   e.preventDefault();
+      // });
+      // $('#theme-default').click(function(e) {
+      //   $(".switch[rel='stylesheet']").attr("href", "");
+      //   var linkSwitch = document.getElementById("switch-css").getAttribute("href");
+      //   console.log('The css file is = ' + linkSwitch);
+      //   e.preventDefault();
+      // });
+
+      // scrollspy
+      $('body').scrollspy({ target: '#spymenu' });
+
+      // timepicker
+      $('.input-group.date').datepicker({
+          format: "yyyy/mm/dd",
+          todayBtn: "linked",
+          autoclose: true,
+          todayHighlight: true
+      });
+
+      // datepicker
+      $('#timepicker').timepicker({
+        showMeridian: false
+      });
+      
+
+    });
+    </script>
+  </body>
+</html>
