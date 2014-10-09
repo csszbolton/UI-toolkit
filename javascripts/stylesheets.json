@@ -1,0 +1,15 @@
+var stylesheets = [
+        {
+            "styleSheetName":"Blue",
+            "styleSheetURL":"stylesheets/themes/blue.css"
+        },
+        {
+            "styleSheetName":"High Contrast",
+            "styleSheetURL":"stylesheets/themes/hi-contrast.css"
+        }
+];
+
+
+$.each(stylesheets, function(idx, obj) {
+    alert("obj.styleSheetName");
+});
