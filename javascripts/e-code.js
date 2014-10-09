@@ -11,12 +11,13 @@ $(window).resize(function() {
 	defineBarHeight(); // Resize left bar every time window size is changed
 });
 
-$('.col-fixed').on('click', function(){
-	if ($(this).hasClass('col-fixed-collapsed')) {
-		$(this).removeClass('col-fixed-collapsed', 150);
+$('.col-expander').on('click', function(){
+	var parent = $(this).parent('.col-fixed'); // Get buttons parent, the whole left column
+	if (parent.hasClass('col-fixed-collapsed')) { // if it's collapsed, expand it
+		parent.removeClass('col-fixed-collapsed', 150);
 		$('.col-content').removeClass('col-content-expanded', 150);
-	} else {
-		$(this).addClass('col-fixed-collapsed', 150);
+	} else { // else collapse it
+		parent.addClass('col-fixed-collapsed', 150);
 		$('.col-content').addClass('col-content-expanded', 150);
 	}
 });

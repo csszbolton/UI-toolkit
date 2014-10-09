@@ -6,7 +6,8 @@
   /* See variables.scss */
   float: left;
   background: #666;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .col-fixed-collapsed {
   width: 42px;
