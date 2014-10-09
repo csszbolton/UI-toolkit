@@ -1,0 +1,24 @@
+/* Template CSS */
+/* For structure only */
+/* So we can have a fixed column for navigation and use bootstraps fluid scaling */
+.col-fixed {
+  width: 240px;
+  /* See variables.scss */
+  float: left;
+  background: #666;
+  position: relative; }
+
+.col-fixed-collapsed {
+  width: 42px;
+  /* See variables.scss */
+  padding: 5px; }
+
+.col-content {
+  width: calc(100% - 240px);
+  float: left; }
+
+.col-content-expanded {
+  width: calc(100% - 42px); }
+
+.e-topbar {
+  background: #DDD; }
