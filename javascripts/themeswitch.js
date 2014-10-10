@@ -8,7 +8,7 @@ if($.cookie("css-padding")) {
 
 $(document).ready(function() { 
 
-var stylesheets = [
+var stylesheets = [ // stylesheets handled in an array
         {
             "styleSheetName":"Blue",
             "styleSheetID":"blue",
@@ -21,7 +21,7 @@ var stylesheets = [
         }
 ];
 
-var paddingSheet = [
+var paddingSheet = [ // padding stylesheets handled in an array
         {
             "paddingSheetName":"Compact",
             "paddingSheetID":"compact",
