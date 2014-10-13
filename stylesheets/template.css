@@ -10,16 +10,15 @@
   overflow: hidden; }
 
 .col-fixed-collapsed {
-  width: 42px;
-  /* See variables.scss */
-  padding: 5px; }
+  width: 35px;
+  /* See variables.scss */ }
 
 .col-content {
   width: calc(100% - 240px);
   float: left; }
 
 .col-content-expanded {
-  width: calc(100% - 42px); }
+  width: calc(100% - 35px); }
 
 .e-topbar {
   background: #DDD; }

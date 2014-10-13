@@ -12,12 +12,15 @@ $(window).resize(function() {
 });
 
 $('.col-expander').on('click', function(){
+
 	var parent = $(this).parent('.col-fixed'); // Get buttons parent, the whole left column
 	if (parent.hasClass('col-fixed-collapsed')) { // if it's collapsed, expand it
 		parent.removeClass('col-fixed-collapsed', 150);
 		$('.col-content').removeClass('col-content-expanded', 150);
+		$('#side-menu li a span').toggle(25);
 	} else { // else collapse it
 		parent.addClass('col-fixed-collapsed', 150);
 		$('.col-content').addClass('col-content-expanded', 150);
+		$('#side-menu li a span').toggle();
 	}
 });

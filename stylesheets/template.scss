@@ -6,7 +6,7 @@
 /* So we can have a fixed column for navigation and use bootstraps fluid scaling */
 
 $colFixedWidth: 240px;
-$colFixedWidthCollapsed: 42px;
+$colFixedWidthCollapsed: 35px;
 
 .col-fixed {
 	width: $colFixedWidth; /* See variables.scss */
@@ -18,7 +18,6 @@ $colFixedWidthCollapsed: 42px;
 
 .col-fixed-collapsed {
 	width: $colFixedWidthCollapsed; /* See variables.scss */
-	padding: 5px;
 }
 
 .col-content {

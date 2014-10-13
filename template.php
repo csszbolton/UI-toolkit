@@ -36,11 +36,15 @@
   <body id="top">
 
       <div class="col-fixed">
-        <div class="col-expander">><</div>
         <?php include("includes/branding.html") ?>
-         <?php include("includes/nav.html") ?>
-
-
+        
+        <div class="col-expander">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+        
+        <?php include("includes/nav.html") ?>
       </div>
       <div class="col-content">
         <div class="container-fluid">
@@ -60,6 +64,7 @@
     
     <script src="javascripts/bootstrap-datepicker.js"></script>
     <script src="javascripts/bootstrap-timepicker.js"></script>
+    <script src="javascripts/metisMenu.min.js"></script>
 
     <script src="javascripts/e-code.js"></script>
 
@@ -69,6 +74,10 @@
 
     $(document).ready(function() {
 
+      // Initiate tree menu js
+      $('#side-menu').metisMenu({
+          toggle: false
+      });
       // Table row keyboard use
       $( "table tbody td a" ).focus(function() {  
         $( this ).parents('tr').addClass( "hover-state" );

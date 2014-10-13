@@ -1,0 +1,85 @@
+//== Left Navigation
+$sidebar-border:                  #ddd;
+$sidebar-color:                   #e4e4e4;
+$sidebar-hover-color:             #666666;
+
+
+.branding {
+	width: 220px;
+	height:50px;
+	margin: 10px;
+}
+.col-fixed .branding {
+	background-image: url(../../images/logo-sm.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.col-fixed.col-fixed-collapsed .branding {
+	background-image: url(../../images/logo-col.png);
+	background-position: 0% 50%;
+	background-repeat: no-repeat;
+	margin: 10px 5px;
+}
+.col-expander {
+	cursor: pointer;
+	padding: 10px;
+	.icon-bar {
+		background-color: $sidebar-color;
+		display: block;
+		width: 15px;
+		height: 2px;
+		border-radius: 1px;
+		margin-top:4px;
+	}
+}
+.navbar-default.sidebar {
+	background-color: transparent;
+
+	a {
+		color: $sidebar-color;
+
+		&:hover {
+			color: $sidebar-hover-color;
+		}
+	}
+	.arrow {
+		float: right;
+	}
+	.sidebar-nav.navbar-collapse {
+		padding: 0;
+	}
+
+	.active>a>.arrow:before {
+		content: "\e114";
+	}
+
+	#side-menu {
+		border-top: solid 1px $sidebar-border;
+		white-space: nowrap;
+		overflow: hidden;
+		/*border-bottom: solid 1px #ddd;*/
+		li {
+			a {
+				padding:5px 10px;
+				/*border-top: 1px solid #ddd;*/
+				border-bottom: 1px solid $sidebar-border;
+				/*background-color: transparent;*/
+			}
+
+			ul li {
+				a {
+					border-bottom: none;
+					font-size: 12px;
+				}
+				ul li a {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+}
+ul.nav.nav-second-level.collapse,
+ul.nav.nav-second-level.collapsing  {
+	border-bottom: solid 1px $sidebar-border;
+	background-color: rgba(255, 255, 255, 0.2);
+} 
