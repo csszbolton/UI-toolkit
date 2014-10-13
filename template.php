@@ -1,4 +1,4 @@
-<?php
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,46 +35,22 @@
   </head>
   <body id="top">
 
-
-
-
-        <div class="col-fixed">
+      <div class="col-fixed">
         <div class="col-expander">><</div>
-        <div class="branding">Branding</div>
-        <div class="product-name">Product name</div>
-        <div class="system-stats">Sys stats</div>
-        <div class="search">Search</div>
-        <nav>Nav here</nav>
+        <?php include("includes/branding.html") ?>
+         <?php include("includes/nav.html") ?>
 
-        </div>
-        <div class="col-content">
+
+      </div>
+      <div class="col-content">
         <div class="container-fluid">
           <div class="row">
-          <div class="col-xs-24 e-topbar">
-            <div class="row">
-              <div class="col-xs-12">ok</div>
-              <div class="col-xs-12">ok</div>
-            </div>
-          </div>
+           <?php include("includes/topbar.html") ?>
+           <?php include("includes/content.html") ?>
 
-          <div class="col-xs-6">
-            <div class="well">well 1</div>
           </div>
-          <div class="col-xs-6">
-            <div class="well">well 2</div>
-          </div>
-          <div class="col-xs-6">
-            <div class="well">well 3</div>
-          </div>
-          <div class="col-xs-6">
-            <div class="well">well 4</div>
-          </div>
-
-</div>
         </div>
-        <ul id="padding-switcher"></ul>
-        </div>
-    
+      </div>
 
     <!-- jQuery UI JS -->
     <script src="javascripts/jquery-ui.min.js"></script>
@@ -122,4 +98,3 @@
     </script>
   </body>
 </html>
-?>
