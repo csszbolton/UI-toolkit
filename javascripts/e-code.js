@@ -24,3 +24,19 @@ $('.col-expander').on('click', function(){
 		$('#side-menu li a span').toggle();
 	}
 });
+
+/*$(".ui-container").accordion({
+collapsible: true,
+icons: { "header": "glyphicon glyphicon-chevron-up", "activeHeader": "glyphicon glyphicon-chevron-down" }
+});*/
+
+$( ".sortable" ).sortable({
+	cursor: "move",
+	handle: ".move-handler",
+	items: "> >",
+	axis: "x",
+    update: function (event, ui) {
+        var data = $(this).sortable('serialize');
+        console.log(data);
+    }
+});

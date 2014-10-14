@@ -11,10 +11,10 @@ $master-hasBoxShadow: false;
 // Borders
 $master-borderWidth: 1px;
 $master-borderStyle: solid;
-$master-borderColor: red;
+$master-borderColor: #CCC;
 
-// Box Shadow
-
+/* // Box Shadow
+$master-boxShadowVal: 1px, 1px, 1px, #000; */
 
 // END THEME MASTER VARIABLES 
 
@@ -26,51 +26,48 @@ $uiContainerHasBorder: false; // Mixin - search for "@include border" to configu
 $uic-headerBg: #efefef;
 $uic-headerHasBorder: true;
 	// Top border
-	$uic-top: $master-borderWidth $master-borderStyle $master-borderColor;
+	$uic-HeaderBorderTop: none;
 	// Right border
-	$uic-right: $master-borderWidth $master-borderStyle $master-borderColor;
+	$uic-HeaderBorderRight: none;
 	// Bottom border
-	$uic-bottom: $master-borderWidth $master-borderStyle $master-borderColor;
+	$uic-HeaderBorderBottom: $master-borderWidth $master-borderStyle $master-borderColor;
 	// Left border
-	$uic-left: $master-borderWidth $master-borderStyle $master-borderColor;
+	$uic-HeaderBorderLeft: none;
 
 // UI container control band
 $uic-controlBandBg: #efefef;
 $uic-controlBandHasBorder: false;
 
 	// Top border
-	$uic-controlBandBorderTopSize: $master-borderWidth;
-	$uic-controlBandBorderTopStyle: $master-borderStyle;
-	$uic-controlBandBorderTopColor: $master-borderColor;
+	$uic-ControlBandTop: $master-borderWidth $master-borderStyle $master-borderColor;
 	// Right border
-	$uic-controlBandBorderRightSize: $master-borderWidth;
-	$uic-controlBandBorderRightStyle: $master-borderStyle;
-	$uic-controlBandBorderRightColor: $master-borderColor;
+	$uic-ControlBandRight: $master-borderWidth $master-borderStyle $master-borderColor;
 	// Bottom border
-	$uic-controlBandBorderBottomSize: $master-borderWidth;
-	$uic-controlBandBorderBottomStyle: $master-borderStyle;
-	$uic-controlBandBorderBottomColor: $master-borderColor;
+	$uic-ControlBandBottom: $master-borderWidth $master-borderStyle $master-borderColor;
 	// Left border
-	$uic-controlBandBorderLeftSize: $master-borderWidth;
-	$uic-controlBandBorderLeftStyle: $master-borderStyle;
-	$uic-controlBandBorderLeftColor: $master-borderColor;
+	$uic-ControlBandLeft: $master-borderWidth $master-borderStyle $master-borderColor;
 
 // UI container main content area
 $uic-contentBg: #fff;
 
+body {
+	background: #ccc;
+}
+
 .ui-container {
 	background: $uiContainerBg;
-	@if $master-hasBoxShadow == true {
-		@include box-shadow;
-	}
+/* 	@if $master-hasBoxShadow == true {
+	@include box-shadow($master-boxShadowVal);
+} */
 
 	.ui-c-header {
 		background: $uic-headerBg;
 		@if $uic-headerHasBorder == true {
-			@include border($uic-top,
-							$uic-headerBorderRightSize $uic-headerBorderRightStyle $uic-headerBorderRightColor,
-							$uic-headerBorderBottomSize $uic-headerBorderBottomStyle $uic-headerBorderBottomColor,
-							$uic-headerBorderLeftSize $uic-headerBorderLeftStyle $uic-headerBorderLeftColor);
+			@include border($uic-HeaderBorderTop, $uic-HeaderBorderRight, $uic-HeaderBorderBottom, $uic-HeaderBorderLeft);
+		}
+
+		h2 {
+			text-transform: uppercase;
 		}
 
 	}
@@ -78,10 +75,7 @@ $uic-contentBg: #fff;
 	.ui-c-band {
 		background: $uic-controlBandBg;
 		@if $uic-controlBandHasBorder == true {
-			@include border($uic-headerBorderTopSize $uic-headerBorderTopStyle $uic-headerBorderTopColor,
-							$uic-headerBorderRightSize $uic-headerBorderRightStyle $uic-headerBorderRightColor,
-							$uic-headerBorderBottomSize $uic-headerBorderBottomStyle $uic-headerBorderBottomColor,
-							$uic-headerBorderLeftSize $uic-headerBorderLeftStyle $uic-headerBorderLeftColor);
+			@include border($uic-ControlBandTop, $uic-ControlBandRight, $uic-ControlBandBottom, $uic-ControlBandLeft);
 		}
 
 	}

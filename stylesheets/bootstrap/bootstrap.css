@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -251,6 +251,7 @@ th {
   font-family: 'Glyphicons Halflings';
   src: url("bootstrap/glyphicons-halflings-regular.eot");
   src: url("bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); }
+
 .glyphicon {
   position: relative;
   top: 1px;
@@ -875,7 +876,7 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -4627,12 +4628,14 @@ a.thumbnail.active {
 
   to {
     background-position: 0 0; } }
+
 @keyframes progress-bar-stripes {
   from {
     background-position: 40px 0; }
 
   to {
     background-position: 0 0; } }
+
 .progress {
   overflow: hidden;
   height: 20px;
@@ -5620,7 +5623,7 @@ button.close {
     border-radius: 10px;
     cursor: pointer;
     background-color: #000 \9;
-    background-color: transparent; }
+    background-color: rgba(0, 0, 0, 0); }
   .carousel-indicators .active {
     margin: 0;
     width: 12px;
@@ -5708,6 +5711,7 @@ button.close {
 
 @-ms-viewport {
   width: device-width; }
+
 .visible-xs, .visible-sm, .visible-md, .visible-lg {
   display: none !important; }
 
@@ -5926,10 +5930,25 @@ table {
 .table > tbody > tr:last-child {
   border-bottom: solid 1px #c3d1d8; }
 
-/* Template CSS */
-/* For structure only */
-body {
-  background: #ccc; }
+html {
+  overflow-x: hidden; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+.row.alpha {
+  margin-left: 0; }
+
+.row.omega {
+  margin-right: 0; }
 
 /* So we can have a fixed column for navigation and use bootstraps fluid scaling */
 .col-fixed {
@@ -5954,9 +5973,34 @@ body {
 .e-topbar {
   background: #DDD; }
 
-<<<<<<< HEAD
 /* UI container - the building block of the application */
-=======
+.ui-container .ui-c-config-control {
+  text-align: right; }
+.ui-container h2 {
+  display: inline; }
+
+/* Moveable items */
+.move-handler:hover {
+  cursor: move; }
+
+/* Breadcrumb */
+.e-breadcrumb {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0; }
+
+.e-breadcrumb > li {
+  display: inline-block; }
+
+.e-breadcrumb > li + li:before {
+  content: "/ ";
+  padding: 0 4px;
+  color: #bbb; }
+
+/* Username */
+.username-area {
+  text-align: right; }
+
 .branding {
   width: 220px;
   height: 50px;
@@ -6016,4 +6060,3 @@ ul.nav.nav-second-level.collapse,
 ul.nav.nav-second-level.collapsing {
   border-bottom: solid 1px #dddddd;
   background-color: rgba(255, 255, 255, 0.2); }
->>>>>>> origin/master

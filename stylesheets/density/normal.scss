@@ -1,3 +1,47 @@
-* {
-	padding: inherit !important;
+// Custom Mixins
+@import "../mixins/thememixins";
+
+$allPadding:		.8rem;
+$leftRightPadding: 	0 .8rem;
+$topBottomPadding:	.8rem 0;
+
+.e-topbar {
+ 	@include rem(margin, 0 0 1rem);
+ 	@include rem(padding, $allPadding);
+}
+
+.ui-container {
+
+	.ui-c-header {
+
+		@include rem(padding, $allPadding);
+
+		h2 {
+		  @include rem(font-size, 1.5rem);
+		  @include rem(margin, 1.1rem 0);
+		  @include rem(line-height, 2.2rem);
+		  font-weight: bold;
+		}
+
+	}
+
+	.ui-c-band {
+		@include rem(padding, $allPadding);
+	}
+
+	.ui-c-maincontent {
+	
+	}
+
+	.ui-c-content {
+
+	}
+
+	.not-table {
+		@include rem(padding, $allPadding);
+	}
+}
+
+table { // TEMP!!
+	width: 100%;
 }
