@@ -17,9 +17,10 @@
     <!-- <link rel="stylesheet" type="text/css" href="stylesheets/icomoon.css"> -->
     <link rel="stylesheet" type="text/css" href="stylesheets/datepicker3.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/themes/default.css">
     <link rel="stylesheet" type="text/css" id="switch-css" class="switch" href="">
-<!-- <link rel="stylesheet" type="text/css" href="stylesheets/density/normal.css">
-<link rel="stylesheet" type="text/css" id="switch-density" class="switch-css-density" href=""> -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/density/normal.css">
+    <link rel="stylesheet" type="text/css" id="switch-density" class="switch-css-density" href="">
     <script src="javascripts/jquery-1.11.1.min.js"></script>
     <script src="javascripts/jquerycookie.js"></script>
     <script src="javascripts/themeswitch.js"></script>

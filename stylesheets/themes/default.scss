@@ -1,0 +1,91 @@
+// Custom Mixins
+@import "../mixins/thememixins";
+
+// UI container - the building block of the application
+
+// Theme Master Variables 
+
+// Config 
+$master-hasBoxShadow: false;
+
+// Borders
+$master-borderWidth: 1px;
+$master-borderStyle: solid;
+$master-borderColor: #CCC;
+
+/* // Box Shadow
+$master-boxShadowVal: 1px, 1px, 1px, #000; */
+
+// END THEME MASTER VARIABLES 
+
+// Master UI container 
+$uiContainerBg: #fff; // Can handle BG images too
+$uiContainerHasBorder: false; // Mixin - search for "@include border" to configure
+
+// UI container header
+$uic-headerBg: #efefef;
+$uic-headerHasBorder: true;
+	// Top border
+	$uic-HeaderBorderTop: none;
+	// Right border
+	$uic-HeaderBorderRight: none;
+	// Bottom border
+	$uic-HeaderBorderBottom: $master-borderWidth $master-borderStyle $master-borderColor;
+	// Left border
+	$uic-HeaderBorderLeft: none;
+
+// UI container control band
+$uic-controlBandBg: #efefef;
+$uic-controlBandHasBorder: false;
+
+	// Top border
+	$uic-ControlBandTop: $master-borderWidth $master-borderStyle $master-borderColor;
+	// Right border
+	$uic-ControlBandRight: $master-borderWidth $master-borderStyle $master-borderColor;
+	// Bottom border
+	$uic-ControlBandBottom: $master-borderWidth $master-borderStyle $master-borderColor;
+	// Left border
+	$uic-ControlBandLeft: $master-borderWidth $master-borderStyle $master-borderColor;
+
+// UI container main content area
+$uic-contentBg: #fff;
+
+body {
+	background: #ccc;
+}
+
+.ui-container {
+	background: $uiContainerBg;
+/* 	@if $master-hasBoxShadow == true {
+	@include box-shadow($master-boxShadowVal);
+} */
+
+	.ui-c-header {
+		background: $uic-headerBg;
+		@if $uic-headerHasBorder == true {
+			@include border($uic-HeaderBorderTop, $uic-HeaderBorderRight, $uic-HeaderBorderBottom, $uic-HeaderBorderLeft);
+		}
+
+		h2 {
+			text-transform: uppercase;
+		}
+
+	}
+
+	.ui-c-band {
+		background: $uic-controlBandBg;
+		@if $uic-controlBandHasBorder == true {
+			@include border($uic-ControlBandTop, $uic-ControlBandRight, $uic-ControlBandBottom, $uic-ControlBandLeft);
+		}
+
+	}
+
+	.ui-c-maincontent {
+	
+	}
+
+	.ui-c-content {
+		background: $uic-contentBg;
+	}
+
+}

@@ -1,0 +1,22 @@
+/* // Box Shadow
+$master-boxShadowVal: 1px, 1px, 1px, #000; */
+body {
+  background: #ccc; }
+
+.ui-container {
+  background: white;
+  /* 	@if $master-hasBoxShadow == true {
+  	@include box-shadow($master-boxShadowVal);
+  } */ }
+  .ui-container .ui-c-header {
+    background: #efefef;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #cccccc;
+    border-left: none; }
+    .ui-container .ui-c-header h2 {
+      text-transform: uppercase; }
+  .ui-container .ui-c-band {
+    background: #efefef; }
+  .ui-container .ui-c-content {
+    background: white; }

@@ -5926,8 +5926,26 @@ table {
 .table > tbody > tr:last-child {
   border-bottom: solid 1px #c3d1d8; }
 
-/* Template CSS */
-/* For structure only */
+html {
+  overflow-x: hidden; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+.row.alpha {
+  margin-left: 0; }
+
+.row.omega {
+  margin-right: 0; }
+
 /* So we can have a fixed column for navigation and use bootstraps fluid scaling */
 .col-fixed {
   width: 240px;
@@ -5954,6 +5972,34 @@ table {
 
 .e-topbar {
   background: #DDD; }
+
+/* UI container - the building block of the application */
+.ui-container .ui-c-config-control {
+  text-align: right; }
+.ui-container h2 {
+  display: inline; }
+
+/* Moveable items */
+.move-handler:hover {
+  cursor: move; }
+
+/* Breadcrumb */
+.e-breadcrumb {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0; }
+
+.e-breadcrumb > li {
+  display: inline-block; }
+
+.e-breadcrumb > li + li:before {
+  content: "/ ";
+  padding: 0 4px;
+  color: #bbb; }
+
+/* Username */
+.username-area {
+  text-align: right; }
 
 .col-fixed {
   position: fixed;
