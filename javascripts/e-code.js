@@ -15,12 +15,12 @@ $('.col-expander').on('click', function(){
 
 	var parent = $(this).parent('.col-fixed'); // Get buttons parent, the whole left column
 	if (parent.hasClass('col-fixed-collapsed')) { // if it's collapsed, expand it
-		parent.removeClass('col-fixed-collapsed', 150);
-		$('.col-content').removeClass('col-content-expanded', 150);
-		$('#side-menu li a span').toggle(25);
+		parent.removeClass('col-fixed-collapsed', 0);
+		$('.col-content').removeClass('col-content-expanded', 0);
+		$('#side-menu i').css({'padding-right': '0px'}, 0);
 	} else { // else collapse it
-		parent.addClass('col-fixed-collapsed', 150);
-		$('.col-content').addClass('col-content-expanded', 150);
-		$('#side-menu li a span').toggle();
+		parent.addClass('col-fixed-collapsed', 0);
+		$('.col-content').addClass('col-content-expanded', 0);
+		$('#side-menu i').css({'padding-right': '15px'}, 0);
 	}
 });

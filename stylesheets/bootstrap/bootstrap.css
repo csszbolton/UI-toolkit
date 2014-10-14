@@ -5933,28 +5933,34 @@ table {
   width: 240px;
   /* See variables.scss */
   float: left;
-  background: #666;
-  position: relative;
-  overflow: hidden; }
+  background: #666; }
 
 .col-fixed-collapsed {
-  width: 35px;
-  /* See variables.scss */ }
-
-.col-content {
-  width: calc(100% - 240px);
+  width: 240px;
+  /* See variables.scss */
   float: left; }
 
+.col-content {
+  min-height: 2000px;
+  background-color: #ffffff;
+  width: calc(100% - 240px);
+  float: right; }
+
 .col-content-expanded {
-  width: calc(100% - 35px); }
+  width: calc(100% - 35px);
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 .e-topbar {
   background: #DDD; }
 
-.branding {
-  width: 220px;
-  height: 50px;
-  margin: 10px; }
+.col-fixed {
+  position: fixed;
+  z-index: 10; }
+
+.col-content {
+  z-index: 50; }
 
 .col-fixed .branding {
   background-image: url(../../images/logo-sm.png);
@@ -5979,23 +5985,28 @@ table {
     margin-top: 4px; }
 
 .navbar-default.sidebar {
-  background-color: transparent; }
+  background-color: transparent;
+  overflow-y: auto;
+  /*.arrow {
+  	float: right;
+  }*/ }
   .navbar-default.sidebar a {
     color: #e4e4e4; }
     .navbar-default.sidebar a:hover {
       color: #666666; }
-  .navbar-default.sidebar .arrow {
-    float: right; }
   .navbar-default.sidebar .sidebar-nav.navbar-collapse {
     padding: 0; }
   .navbar-default.sidebar .active > a > .arrow:before {
-    content: "\e114"; }
+    content: "\e113"; }
   .navbar-default.sidebar #side-menu {
     border-top: solid 1px #dddddd;
-    white-space: nowrap;
     overflow: hidden;
-    /*border-bottom: solid 1px #ddd;*/ }
+    /*border-bottom: solid 1px #ddd;*/
+    /* current page highlight */ }
+    .navbar-default.sidebar #side-menu .glyphicon {
+      padding-right: 5px; }
     .navbar-default.sidebar #side-menu li a {
+      /*white-space: nowrap;*/
       padding: 5px 10px;
       /*border-top: 1px solid #ddd;*/
       border-bottom: 1px solid #dddddd;
@@ -6003,10 +6014,45 @@ table {
     .navbar-default.sidebar #side-menu li ul li a {
       border-bottom: none;
       font-size: 12px; }
+      .navbar-default.sidebar #side-menu li ul li a .glyphicon {
+        padding-right: 6px; }
     .navbar-default.sidebar #side-menu li ul li ul li a {
-      padding-left: 20px; }
+      font-size: 11px;
+      padding: 3px 10px 3px 16px; }
+    .navbar-default.sidebar #side-menu a.active, .navbar-default.sidebar #side-menu a:active, .navbar-default.sidebar #side-menu a:focus {
+      background-color: #eeeeee;
+      color: #666666; }
 
 ul.nav.nav-second-level.collapse,
 ul.nav.nav-second-level.collapsing {
   border-bottom: solid 1px #dddddd;
-  background-color: rgba(255, 255, 255, 0.2); }
+  background-color: rgba(255, 255, 255, 0.1); }
+
+ul.nav.nav-third-level.collapse,
+ul.nav.nav-third-level.collapsing {
+  background-color: rgba(255, 255, 255, 0.1); }
+
+/* Footer */
+.left-footer {
+  padding: 10px;
+  color: #e4e4e4; }
+  .left-footer p {
+    margin: 0; }
+
+/* Header */
+.branding {
+  width: 240px;
+  height: 60px; }
+
+.system {
+  color: #e4e4e4;
+  padding-bottom: 3px; }
+  .system .sys-name, .system .sys-status-live {
+    display: inline-block;
+    padding: 3px 6px;
+    background-color: #04476f;
+    border-radius: 3px;
+    margin-top: 3px; }
+  .system .sys-status-live {
+    background-color: #46710B;
+    /*margin-left: 10px;*/ }

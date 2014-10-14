@@ -5,20 +5,24 @@
   width: 240px;
   /* See variables.scss */
   float: left;
-  background: #666;
-  position: relative;
-  overflow: hidden; }
+  background: #666; }
 
 .col-fixed-collapsed {
-  width: 35px;
-  /* See variables.scss */ }
-
-.col-content {
-  width: calc(100% - 240px);
+  width: 240px;
+  /* See variables.scss */
   float: left; }
 
+.col-content {
+  min-height: 2000px;
+  background-color: #ffffff;
+  width: calc(100% - 240px);
+  float: right; }
+
 .col-content-expanded {
-  width: calc(100% - 35px); }
+  width: calc(100% - 35px);
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 .e-topbar {
   background: #DDD; }

@@ -38,13 +38,15 @@
       <div class="col-fixed">
         <?php include("includes/branding.html") ?>
         
-        <div class="col-expander">
+        <!-- <div class="col-expander">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </div>
+        </div> -->
         
         <?php include("includes/nav.html") ?>
+
+        <?php include("includes/footer.html") ?>
       </div>
       <div class="col-content">
         <div class="container-fluid">
@@ -65,6 +67,7 @@
     <script src="javascripts/bootstrap-datepicker.js"></script>
     <script src="javascripts/bootstrap-timepicker.js"></script>
     <script src="javascripts/metisMenu.min.js"></script>
+    <script src="javascripts/jquery.jscrollpane.min.js"></script>
 
     <script src="javascripts/e-code.js"></script>
 
@@ -78,6 +81,22 @@
       $('#side-menu').metisMenu({
           toggle: false
       });
+
+
+      navbarHeight();
+      $(window).resize(navbarHeight);
+
+      function navbarHeight() {
+        var otherHeight = $('.left-header').outerHeight() + $('.left-footer').outerHeight();
+        var paneHeight = $(window).height() - otherHeight;
+        $('.navbar-default.sidebar').css({
+          'height': paneHeight
+        });
+        console.log($('.left-header').outerHeight());
+      }
+
+
+
       // Table row keyboard use
       $( "table tbody td a" ).focus(function() {  
         $( this ).parents('tr').addClass( "hover-state" );

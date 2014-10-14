@@ -6,27 +6,31 @@
 /* So we can have a fixed column for navigation and use bootstraps fluid scaling */
 
 $colFixedWidth: 240px;
-$colFixedWidthCollapsed: 35px;
+$colFixedWidthCollapsed: 240px;
 
 .col-fixed {
 	width: $colFixedWidth; /* See variables.scss */
 	float: left;
 	background: #666;
-	position: relative;
-	overflow: hidden;
 }
 
 .col-fixed-collapsed {
 	width: $colFixedWidthCollapsed; /* See variables.scss */
-}
-
-.col-content {
-	width:calc(100% - #{$colFixedWidth}); 
 	float: left;
 }
 
+.col-content {
+	min-height: 2000px;
+	background-color: #ffffff;
+	width:calc(100% - #{$colFixedWidth}); 
+	float: right;
+}
+
 .col-content-expanded {
-	width:calc(100% - #{$colFixedWidthCollapsed}); 
+	width:calc(100% - 35px);
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 .e-topbar {

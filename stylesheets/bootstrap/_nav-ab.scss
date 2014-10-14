@@ -4,10 +4,13 @@ $sidebar-color:                   #e4e4e4;
 $sidebar-hover-color:             #666666;
 
 
-.branding {
-	width: 220px;
-	height:50px;
-	margin: 10px;
+
+.col-fixed {
+	position: fixed;
+	z-index: 10;
+}
+.col-content {
+	z-index: 50;
 }
 .col-fixed .branding {
 	background-image: url(../../images/logo-sm.png);
@@ -34,6 +37,7 @@ $sidebar-hover-color:             #666666;
 }
 .navbar-default.sidebar {
 	background-color: transparent;
+	overflow-y: auto;
 
 	a {
 		color: $sidebar-color;
@@ -42,24 +46,27 @@ $sidebar-hover-color:             #666666;
 			color: $sidebar-hover-color;
 		}
 	}
-	.arrow {
+	/*.arrow {
 		float: right;
-	}
+	}*/
 	.sidebar-nav.navbar-collapse {
 		padding: 0;
 	}
 
 	.active>a>.arrow:before {
-		content: "\e114";
+		content: "\e113";
 	}
 
 	#side-menu {
-		border-top: solid 1px $sidebar-border;
-		white-space: nowrap;
+		border-top: solid 1px $sidebar-border;		
 		overflow: hidden;
+		.glyphicon {
+			padding-right: 5px;
+		}
 		/*border-bottom: solid 1px #ddd;*/
 		li {
 			a {
+				/*white-space: nowrap;*/
 				padding:5px 10px;
 				/*border-top: 1px solid #ddd;*/
 				border-bottom: 1px solid $sidebar-border;
@@ -70,16 +77,59 @@ $sidebar-hover-color:             #666666;
 				a {
 					border-bottom: none;
 					font-size: 12px;
+
+					.glyphicon {
+						padding-right: 6px;
+					}
 				}
 				ul li a {
-					padding-left: 20px;
+					font-size: 11px;
+					padding:3px 10px 3px 16px;
 				}
 			}
+		}
+		/* current page highlight */
+		a.active, a:active, a:focus {
+			background-color: #eeeeee;
+			color: #666666;
 		}
 	}
 }
 ul.nav.nav-second-level.collapse,
 ul.nav.nav-second-level.collapsing  {
 	border-bottom: solid 1px $sidebar-border;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.1);
 } 
+ul.nav.nav-third-level.collapse,
+ul.nav.nav-third-level.collapsing  {
+	background-color: rgba(255, 255, 255, 0.1);
+} 
+/* Footer */
+.left-footer {
+	padding: 10px;
+	color: $sidebar-color;
+
+	p {
+		margin: 0;
+	}
+}
+/* Header */
+.branding {
+	width: 240px;
+	height:60px;
+}
+.system {
+	color: $sidebar-color;
+	padding-bottom: 3px;
+	.sys-name, .sys-status-live {
+		display: inline-block;
+		padding: 3px 6px;
+		background-color: #04476f;
+		border-radius: 3px;
+		margin-top: 3px;
+	}
+	.sys-status-live {
+		background-color: #46710B;
+		/*margin-left: 10px;*/
+	}
+}
