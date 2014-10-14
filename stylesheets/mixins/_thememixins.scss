@@ -1,0 +1,56 @@
+// Border Shorthand
+// -------------------------
+@mixin border($border: false, $border_horizontal: false, $border_bottom: false, $border_left: false) {
+  $args: length($border);
+
+
+  // Reset Variables Based on Argument Count
+  @if $args > 1 and length(nth($border,1)) > 1 or nth($border,1) == none {
+
+    @if $args == 4 {
+      $border_left: nth($border, 4);
+      $border_bottom: nth($border, 3);
+      $border_horizontal: nth($border, 2);
+      $border: nth($border, 1);
+    } @else if $args == 3 {
+      $border_bottom: nth($border, 3);
+      $border_horizontal: nth($border, 2);
+      $border: nth($border, 1);
+    } @else if $args == 2 {
+      $border_horizontal: nth($border, 2);
+      $border: nth($border, 1);
+    }
+  }
+
+  // Assign Attributes from Variables
+  @if $border and $border_horizontal and $border_bottom and $border_left {
+    border-top: $border;
+    border-right: $border_horizontal;
+    border-bottom: $border_bottom;
+    border-left: $border_left;
+  } @else if $border and $border_horizontal and $border_bottom {
+    border: $border_horizontal;
+    border-top: $border;
+    border-bottom: $border_bottom;
+  } @else if $border and $border_horizontal {
+    border: $border;
+    border-right: $border_horizontal;
+    border-left: $border_horizontal;
+  } @else {
+    border: $border;
+  }
+ 
+ } // END BORDER
+
+// Box Shadow
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}

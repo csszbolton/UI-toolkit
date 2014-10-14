@@ -1,0 +1,97 @@
+// Custom Mixins
+@import "../mixins/thememixins";
+
+// UI container - the building block of the application
+
+// Theme Master Variables 
+
+// Config 
+$master-hasBoxShadow: false;
+
+// Borders
+$master-borderWidth: 1px;
+$master-borderStyle: solid;
+$master-borderColor: red;
+
+// Box Shadow
+
+
+// END THEME MASTER VARIABLES 
+
+// Master UI container 
+$uiContainerBg: #fff; // Can handle BG images too
+$uiContainerHasBorder: false; // Mixin - search for "@include border" to configure
+
+// UI container header
+$uic-headerBg: #efefef;
+$uic-headerHasBorder: true;
+	// Top border
+	$uic-top: $master-borderWidth $master-borderStyle $master-borderColor;
+	// Right border
+	$uic-right: $master-borderWidth $master-borderStyle $master-borderColor;
+	// Bottom border
+	$uic-bottom: $master-borderWidth $master-borderStyle $master-borderColor;
+	// Left border
+	$uic-left: $master-borderWidth $master-borderStyle $master-borderColor;
+
+// UI container control band
+$uic-controlBandBg: #efefef;
+$uic-controlBandHasBorder: false;
+
+	// Top border
+	$uic-controlBandBorderTopSize: $master-borderWidth;
+	$uic-controlBandBorderTopStyle: $master-borderStyle;
+	$uic-controlBandBorderTopColor: $master-borderColor;
+	// Right border
+	$uic-controlBandBorderRightSize: $master-borderWidth;
+	$uic-controlBandBorderRightStyle: $master-borderStyle;
+	$uic-controlBandBorderRightColor: $master-borderColor;
+	// Bottom border
+	$uic-controlBandBorderBottomSize: $master-borderWidth;
+	$uic-controlBandBorderBottomStyle: $master-borderStyle;
+	$uic-controlBandBorderBottomColor: $master-borderColor;
+	// Left border
+	$uic-controlBandBorderLeftSize: $master-borderWidth;
+	$uic-controlBandBorderLeftStyle: $master-borderStyle;
+	$uic-controlBandBorderLeftColor: $master-borderColor;
+
+// UI container main content area
+$uic-contentBg: #fff;
+
+.ui-container {
+	background: $uiContainerBg;
+	@if $master-hasBoxShadow == true {
+		@include box-shadow;
+	}
+
+	.ui-c-header {
+		background: $uic-headerBg;
+		@if $uic-headerHasBorder == true {
+			@include border($uic-top,
+							$uic-headerBorderRightSize $uic-headerBorderRightStyle $uic-headerBorderRightColor,
+							$uic-headerBorderBottomSize $uic-headerBorderBottomStyle $uic-headerBorderBottomColor,
+							$uic-headerBorderLeftSize $uic-headerBorderLeftStyle $uic-headerBorderLeftColor);
+		}
+
+	}
+
+	.ui-c-band {
+		background: $uic-controlBandBg;
+		@if $uic-controlBandHasBorder == true {
+			@include border($uic-headerBorderTopSize $uic-headerBorderTopStyle $uic-headerBorderTopColor,
+							$uic-headerBorderRightSize $uic-headerBorderRightStyle $uic-headerBorderRightColor,
+							$uic-headerBorderBottomSize $uic-headerBorderBottomStyle $uic-headerBorderBottomColor,
+							$uic-headerBorderLeftSize $uic-headerBorderLeftStyle $uic-headerBorderLeftColor);
+		}
+
+	}
+
+	.ui-c-maincontent {
+	
+	}
+
+	.ui-c-content {
+		background: $uic-contentBg;
+	}
+
+}

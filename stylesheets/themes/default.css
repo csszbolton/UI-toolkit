@@ -1,0 +1,12 @@
+.ui-container {
+  background: white; }
+  .ui-container .ui-c-header {
+    background: #efefef;
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red; }
+  .ui-container .ui-c-band {
+    background: #efefef; }
+  .ui-container .ui-c-content {
+    background: white; }

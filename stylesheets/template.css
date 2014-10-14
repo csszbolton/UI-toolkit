@@ -1,5 +1,8 @@
 /* Template CSS */
 /* For structure only */
+body {
+  background: #ccc; }
+
 /* So we can have a fixed column for navigation and use bootstraps fluid scaling */
 .col-fixed {
   width: 240px;
@@ -23,3 +26,5 @@
 
 .e-topbar {
   background: #DDD; }
+
+/* UI container - the building block of the application */
