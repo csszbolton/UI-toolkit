@@ -60,9 +60,13 @@
           <div class="row">
            <?php include("includes/content.html") ?>
 
+  
+
           </div>
         </div>
       </div>
+    <?php include("includes/about-modal.html") ?>
+      
 
     <!-- jQuery UI JS -->
     <script src="javascripts/jquery-ui.min.js"></script>

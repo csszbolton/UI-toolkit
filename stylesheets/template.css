@@ -24,7 +24,7 @@ html {
   width: 240px;
   /* See variables.scss */
   float: left;
-  background: #666; }
+  background: #666666; }
 
 .col-fixed-collapsed {
   width: 240px;
@@ -33,7 +33,11 @@ html {
 
 .col-content {
   min-height: 2000px;
+<<<<<<< HEAD
   background: #ccc;
+=======
+  background-color: #cccccc;
+>>>>>>> origin/master
   width: calc(100% - 240px);
   float: right; }
 
