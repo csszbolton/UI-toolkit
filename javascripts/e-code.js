@@ -34,9 +34,29 @@ $( ".sortable" ).sortable({
 	cursor: "move",
 	handle: ".move-handler",
 	items: "> >",
-	axis: "x",
     update: function (event, ui) {
         var data = $(this).sortable('serialize');
         console.log(data);
     }
 });
+
+$('.data-table').DataTable({
+  "initComplete": function(settings, json) { 
+  // When the table has finished loading, find the table info and pagination and put a wrapper around them, essentially creating a contol footer
+  	$(this).parent('.dataTables_wrapper').find('.dataTables_info, .dataTables_paginate').each(function() {
+		$(this).addClass("table-options-bottom");
+	});
+  	$(this).parent('.dataTables_wrapper').find(".table-options-bottom").wrapAll("<div class='table-options-bottom-wrapper' />");
+  
+  // Same logic applies for table header, except for Electric we want to appear as a control band
+  	$(this).parent('.dataTables_wrapper').find('.dataTables_length, .dataTables_filter').each(function() {
+		$(this).addClass("table-options-top");
+	});
+  	$(this).parent('.dataTables_wrapper').find(".table-options-top").wrapAll("<div class='ui-c-band cf' />");
+  }
+});
+
+// Magical line-height adjustments 
+
+var usernameAreaHeight = $('.username-area').height() + "px";
+$('.e-breadcrumb').css({"line-height":usernameAreaHeight});

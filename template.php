@@ -17,6 +17,9 @@
     <!-- <link rel="stylesheet" type="text/css" href="stylesheets/icomoon.css"> -->
     <link rel="stylesheet" type="text/css" href="stylesheets/datepicker3.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/timepicker.css">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.dataTables.min.css">
+    
     <link rel="stylesheet" type="text/css" href="stylesheets/themes/default.css">
     <link rel="stylesheet" type="text/css" id="switch-css" class="switch" href="">
     <link rel="stylesheet" type="text/css" href="stylesheets/density/normal.css">
@@ -53,6 +56,8 @@
         <div class="container-fluid">
           <div class="row">
            <?php include("includes/topbar.html") ?>
+          </div>
+          <div class="row">
            <?php include("includes/content.html") ?>
 
           </div>
@@ -69,6 +74,7 @@
     <script src="javascripts/bootstrap-timepicker.js"></script>
     <script src="javascripts/metisMenu.min.js"></script>
     <script src="javascripts/jquery.jscrollpane.min.js"></script>
+    <script src="javascripts/jquery.dataTables.min.js"></script>
 
     <script src="javascripts/e-code.js"></script>
 
@@ -95,33 +101,6 @@
         });
         console.log($('.left-header').outerHeight());
       }
-
-
-
-      // Table row keyboard use
-      $( "table tbody td a" ).focus(function() {  
-        $( this ).parents('tr').addClass( "hover-state" );
-      });
-      $( "table tbody td a" ).focusout(function() {
-          $("table tbody tr").removeClass( "hover-state");
-      });  
-
-      // scrollspy
-      $('body').scrollspy({ target: '#spymenu' });
-
-      // timepicker
-      $('.input-group.date').datepicker({
-          format: "yyyy/mm/dd",
-          todayBtn: "linked",
-          autoclose: true,
-          todayHighlight: true
-      });
-
-      // datepicker
-      $('#timepicker').timepicker({
-        showMeridian: false
-      });
-      
 
     });
     </script>

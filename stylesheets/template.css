@@ -1,5 +1,6 @@
 html {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  -ms-overflow-style: scrollbar; }
 
 .cf:before,
 .cf:after {
@@ -32,7 +33,7 @@ html {
 
 .col-content {
   min-height: 2000px;
-  background-color: #ffffff;
+  background: #ccc;
   width: calc(100% - 240px);
   float: right; }
 

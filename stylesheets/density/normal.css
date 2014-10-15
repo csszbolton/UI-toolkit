@@ -4,23 +4,30 @@
   padding: 13px;
   padding: 0.8rem; }
 
-.ui-container .ui-c-header {
-  padding: 13px;
-  padding: 0.8rem; }
-  .ui-container .ui-c-header h2 {
-    font-size: 24px;
-    font-size: 1.5rem;
-    margin: 18px 0;
-    margin: 1.1rem 0;
-    line-height: 35px;
-    line-height: 2.2rem;
-    font-weight: bold; }
-.ui-container .ui-c-band {
-  padding: 13px;
-  padding: 0.8rem; }
-.ui-container .not-table {
-  padding: 13px;
-  padding: 0.8rem; }
+.ui-container {
+  margin: 0 0 16px;
+  margin: 0 0 1rem; }
+  .ui-container .ui-c-header {
+    padding: 13px;
+    padding: 0.8rem; }
+    .ui-container .ui-c-header h2 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      margin: 18px 0;
+      margin: 1.1rem 0;
+      line-height: 35px;
+      line-height: 2.2rem;
+      font-weight: bold; }
+  .ui-container .ui-c-band {
+    padding: 13px;
+    padding: 0.8rem; }
+  .ui-container .not-table {
+    padding: 13px;
+    padding: 0.8rem; }
 
 table {
   width: 100%; }
+
+.table-options-bottom-wrapper {
+  padding: 13px;
+  padding: 0.8rem; }

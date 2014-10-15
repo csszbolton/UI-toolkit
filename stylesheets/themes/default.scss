@@ -23,7 +23,7 @@ $uiContainerBg: #fff; // Can handle BG images too
 $uiContainerHasBorder: false; // Mixin - search for "@include border" to configure
 
 // UI container header
-$uic-headerBg: #efefef;
+$uic-headerBg: #a5d9f8;
 $uic-headerHasBorder: true;
 	// Top border
 	$uic-HeaderBorderTop: none;
@@ -36,16 +36,16 @@ $uic-headerHasBorder: true;
 
 // UI container control band
 $uic-controlBandBg: #efefef;
-$uic-controlBandHasBorder: false;
+$uic-controlBandHasBorder: true;
 
 	// Top border
-	$uic-ControlBandTop: $master-borderWidth $master-borderStyle $master-borderColor;
+	$uic-ControlBandTop: none;
 	// Right border
-	$uic-ControlBandRight: $master-borderWidth $master-borderStyle $master-borderColor;
+	$uic-ControlBandRight: none;
 	// Bottom border
 	$uic-ControlBandBottom: $master-borderWidth $master-borderStyle $master-borderColor;
 	// Left border
-	$uic-ControlBandLeft: $master-borderWidth $master-borderStyle $master-borderColor;
+	$uic-ControlBandLeft: none;
 
 // UI container main content area
 $uic-contentBg: #fff;

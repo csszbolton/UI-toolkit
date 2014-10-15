@@ -1,5 +1,6 @@
 html {
 	overflow-x: hidden;
+	-ms-overflow-style: scrollbar;
 }
 
 // Clearfix 
@@ -49,7 +50,7 @@ $colFixedWidthCollapsed: 240px;
 
 .col-content {
 	min-height: 2000px;
-	background-color: #ffffff;
+	background: #ccc;
 	width:calc(100% - #{$colFixedWidth}); 
 	float: right;
 }

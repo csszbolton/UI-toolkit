@@ -9,7 +9,7 @@ body {
   	@include box-shadow($master-boxShadowVal);
   } */ }
   .ui-container .ui-c-header {
-    background: #efefef;
+    background: #a5d9f8;
     border-top: none;
     border-right: none;
     border-bottom: 1px solid #cccccc;
@@ -17,6 +17,10 @@ body {
     .ui-container .ui-c-header h2 {
       text-transform: uppercase; }
   .ui-container .ui-c-band {
-    background: #efefef; }
+    background: #efefef;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #cccccc;
+    border-left: none; }
   .ui-container .ui-c-content {
     background: white; }

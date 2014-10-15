@@ -11,6 +11,7 @@ $topBottomPadding:	.8rem 0;
 }
 
 .ui-container {
+ 	@include rem(margin, 0 0 1rem);
 
 	.ui-c-header {
 
@@ -44,4 +45,10 @@ $topBottomPadding:	.8rem 0;
 
 table { // TEMP!!
 	width: 100%;
+}
+
+
+// Tables
+.table-options-bottom-wrapper {
+	@include rem(padding, $allPadding);
 }
