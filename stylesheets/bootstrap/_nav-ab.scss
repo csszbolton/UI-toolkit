@@ -174,6 +174,14 @@ $sidebar-hover-color:             #666666;
 	}
 }
 /* Header */
+.left-header {
+	.title {
+		color: $sidebar-color;
+		margin-top: -8px;
+		margin-bottom: 4px;
+		font-size: 12px;
+	}
+}
 .branding {
 	width: 240px;
 	height:60px;
@@ -183,10 +191,11 @@ $sidebar-hover-color:             #666666;
 	padding-bottom: 3px;
 	.sys-name, .sys-status-live {
 		display: inline-block;
-		padding: 3px 6px;
+		padding: 5px 6px;
 		background-color: #04476f;
 		border-radius: 3px;
-		margin-top: 3px;
+		line-height: 1.5;
+		font-size: 12px;
 	}
 	.sys-status-live {
 		background-color: #46710B;

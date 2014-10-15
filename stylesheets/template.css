@@ -32,7 +32,6 @@ html {
   float: left; }
 
 .col-content {
-  min-height: 2000px;
   background: #ccc;
   background-color: #cccccc;
   width: calc(100% - 240px);
