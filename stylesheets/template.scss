@@ -49,7 +49,7 @@ $colFixedWidthCollapsed: 240px;
 
 .col-content {
 	min-height: 2000px;
-	background-color: #ffffff;
+	background-color: #cccccc;
 	width:calc(100% - #{$colFixedWidth}); 
 	float: right;
 }
