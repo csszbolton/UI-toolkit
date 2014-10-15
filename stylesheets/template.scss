@@ -51,11 +51,8 @@ $colFixedBGcolor: #666;
 
 .col-content {
 	min-height: 2000px;
-<<<<<<< HEAD
 	background: #ccc;
-=======
 	background-color: #cccccc;
->>>>>>> origin/master
 	width:calc(100% - #{$colFixedWidth}); 
 	float: right;
 }
