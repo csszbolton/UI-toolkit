@@ -5951,7 +5951,7 @@ html {
   width: 240px;
   /* See variables.scss */
   float: left;
-  background: #666; }
+  background: #666666; }
 
 .col-fixed-collapsed {
   width: 240px;
@@ -6068,22 +6068,65 @@ html {
     .navbar-default.sidebar #side-menu a.active, .navbar-default.sidebar #side-menu a:active, .navbar-default.sidebar #side-menu a:focus {
       background-color: #eeeeee;
       color: #666666; }
-
-ul.nav.nav-second-level.collapse,
-ul.nav.nav-second-level.collapsing {
-  border-bottom: solid 1px #dddddd;
-  background-color: rgba(255, 255, 255, 0.1); }
-
-ul.nav.nav-third-level.collapse,
-ul.nav.nav-third-level.collapsing {
-  background-color: rgba(255, 255, 255, 0.1); }
+    .navbar-default.sidebar #side-menu ul.nav.nav-second-level.collapse,
+    .navbar-default.sidebar #side-menu ul.nav.nav-second-level.collapsing {
+      border-bottom: solid 1px #dddddd;
+      background-color: #595959; }
+    .navbar-default.sidebar #side-menu ul.nav.nav-third-level.collapse,
+    .navbar-default.sidebar #side-menu ul.nav.nav-third-level.collapsing {
+      background-color: #4d4d4d; }
+    .navbar-default.sidebar #side-menu ul.nav.nav-fourth-level.collapse,
+    .navbar-default.sidebar #side-menu ul.nav.nav-fourth-level.collapsing {
+      background-color: #404040; }
+      .navbar-default.sidebar #side-menu ul.nav.nav-fourth-level.collapse li a,
+      .navbar-default.sidebar #side-menu ul.nav.nav-fourth-level.collapsing li a {
+        font-size: 11px;
+        padding: 3px 10px 3px 21px; }
+    .navbar-default.sidebar #side-menu ul.nav.nav-fifth-level.collapse,
+    .navbar-default.sidebar #side-menu ul.nav.nav-fifth-level.collapsing {
+      background-color: #333333; }
+      .navbar-default.sidebar #side-menu ul.nav.nav-fifth-level.collapse li a,
+      .navbar-default.sidebar #side-menu ul.nav.nav-fifth-level.collapsing li a {
+        font-size: 11px;
+        padding: 3px 10px 3px 26px; }
+    .navbar-default.sidebar #side-menu #cloud-nav {
+      padding: 3px 10px; }
+      .navbar-default.sidebar #side-menu #cloud-nav li {
+        display: inline-block;
+        padding-bottom: 3px;
+        white-space: nowrap; }
+        .navbar-default.sidebar #side-menu #cloud-nav li a {
+          display: inline;
+          background-color: #B35009;
+          color: #ffffff;
+          border-radius: 3px;
+          padding: 3px 5px;
+          margin: 2px 0; }
+          .navbar-default.sidebar #side-menu #cloud-nav li a:hover {
+            background-color: #9b4508; }
+    .navbar-default.sidebar #side-menu #cloud-nav-wrap {
+      padding: 3px 10px; }
+      .navbar-default.sidebar #side-menu #cloud-nav-wrap li {
+        display: inline;
+        /*white-space: nowrap;*/ }
+        .navbar-default.sidebar #side-menu #cloud-nav-wrap li a {
+          display: inline;
+          text-decoration: underline;
+          padding: 3px 0px;
+          margin: 2px 0; }
+          .navbar-default.sidebar #side-menu #cloud-nav-wrap li a:hover {
+            background-color: transparent;
+            color: #FFE0C5; }
 
 /* Footer */
 .left-footer {
   padding: 10px;
   color: #e4e4e4; }
   .left-footer p {
-    margin: 0; }
+    margin: 0;
+    font-size: 10px; }
+  .left-footer [data-toggle="modal"] {
+    cursor: pointer; }
 
 /* Header */
 .branding {
@@ -6102,3 +6145,15 @@ ul.nav.nav-third-level.collapsing {
   .system .sys-status-live {
     background-color: #46710B;
     /*margin-left: 10px;*/ }
+
+/* about modal */
+#aboutModal .modal-dialog {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 10px; }
+  #aboutModal .modal-dialog .modal-header span {
+    vertical-align: bottom;
+    padding-left: 10px; }
+  #aboutModal .modal-dialog .modal-footer {
+    text-align: left; }

@@ -35,11 +35,12 @@ html {
 
 $colFixedWidth: 240px;
 $colFixedWidthCollapsed: 240px;
+$colFixedBGcolor: #666;
 
 .col-fixed {
 	width: $colFixedWidth; /* See variables.scss */
 	float: left;
-	background: #666;
+	background: $colFixedBGcolor;
 }
 
 .col-fixed-collapsed {

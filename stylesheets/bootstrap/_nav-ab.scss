@@ -4,7 +4,6 @@ $sidebar-color:                   #e4e4e4;
 $sidebar-hover-color:             #666666;
 
 
-
 .col-fixed {
 	position: fixed;
 	z-index: 10;
@@ -93,17 +92,73 @@ $sidebar-hover-color:             #666666;
 			background-color: #eeeeee;
 			color: #666666;
 		}
+
+		ul.nav.nav-second-level.collapse,
+		ul.nav.nav-second-level.collapsing  {
+			border-bottom: solid 1px $sidebar-border;
+			background-color: darken($colFixedBGcolor, 5%);
+		} 
+		ul.nav.nav-third-level.collapse,
+		ul.nav.nav-third-level.collapsing  {
+			background-color: darken($colFixedBGcolor, 10%);
+		}
+		ul.nav.nav-fourth-level.collapse,
+		ul.nav.nav-fourth-level.collapsing  {
+			background-color: darken($colFixedBGcolor, 15%);
+			li a {
+				font-size: 11px;
+				padding:3px 10px 3px 21px;
+			}
+		} 
+		ul.nav.nav-fifth-level.collapse,
+		ul.nav.nav-fifth-level.collapsing  {
+			background-color: darken($colFixedBGcolor, 20%);
+			li a {
+				font-size: 11px;
+				padding:3px 10px 3px 26px;
+			}
+		} 
+
+		#cloud-nav {
+			padding: 3px 10px;
+			li {
+				display: inline-block;
+				padding-bottom: 3px;
+				white-space: nowrap;
+				a {
+					display: inline;
+					background-color: #B35009;
+					color: #ffffff;
+					border-radius: 3px;
+					padding: 3px 5px;
+					margin: 2px 0;
+
+					&:hover {
+						background-color: darken(#B35009, 5%);
+					}
+				}
+			}
+		}
+		#cloud-nav-wrap {
+			padding: 3px 10px;
+			li {
+				display: inline;
+				/*white-space: nowrap;*/
+				a {
+					display: inline;
+					text-decoration: underline;
+					padding: 3px 0px;
+					margin: 2px 0;
+
+					&:hover {
+						background-color: transparent;
+						color: #FFE0C5;
+					}
+				}
+			}
+		}  
 	}
 }
-ul.nav.nav-second-level.collapse,
-ul.nav.nav-second-level.collapsing  {
-	border-bottom: solid 1px $sidebar-border;
-	background-color: rgba(255, 255, 255, 0.1);
-} 
-ul.nav.nav-third-level.collapse,
-ul.nav.nav-third-level.collapsing  {
-	background-color: rgba(255, 255, 255, 0.1);
-} 
 /* Footer */
 .left-footer {
 	padding: 10px;
@@ -111,6 +166,11 @@ ul.nav.nav-third-level.collapsing  {
 
 	p {
 		margin: 0;
+		font-size: 10px;
+	}
+
+	[data-toggle="modal"] {
+		cursor: pointer;
 	}
 }
 /* Header */
@@ -131,5 +191,26 @@ ul.nav.nav-third-level.collapsing  {
 	.sys-status-live {
 		background-color: #46710B;
 		/*margin-left: 10px;*/
+	}
+}
+
+/* about modal */
+#aboutModal {
+	.modal-dialog {
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin: 10px;
+
+		.modal-header {
+			span {
+				vertical-align: bottom;
+				padding-left: 10px;
+			}
+		}
+
+		.modal-footer {
+			text-align: left;
+		}
 	}
 }
