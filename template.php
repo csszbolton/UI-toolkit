@@ -53,9 +53,10 @@
         <?php include("includes/footer.html") ?>
       </div>
       <div class="col-content">
+        <?php include("includes/topbar.html") ?>
         <div class="container-fluid">
           <div class="row">
-           <?php include("includes/topbar.html") ?>
+           
           </div>
           <div class="row">
            <?php include("includes/content.html") ?>

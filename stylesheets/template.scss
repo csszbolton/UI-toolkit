@@ -54,6 +54,7 @@ $colFixedBGcolor: #666;
 	background-color: #cccccc;
 	width:calc(100% - #{$colFixedWidth}); 
 	float: right;
+	padding-top: 56px;
 }
 
 .col-content-expanded {
@@ -65,6 +66,16 @@ $colFixedBGcolor: #666;
 
 .e-topbar {
 	background: #DDD;
+}
+
+/* Fixed header */
+.navbar {
+	min-height: 0px;
+	border: none;
+}
+.navbar-fixed-top {
+	left: auto;
+	width:calc(100% - #{$colFixedWidth}); 
 }
 
 

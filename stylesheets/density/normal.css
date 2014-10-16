@@ -1,6 +1,5 @@
 .e-topbar {
-  margin: 0 0 16px;
-  margin: 0 0 1rem;
+  /*@include rem(margin, 0 0 1rem);*/
   padding: 13px;
   padding: 0.8rem; }
 

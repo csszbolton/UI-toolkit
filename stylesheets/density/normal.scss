@@ -6,7 +6,7 @@ $leftRightPadding: 	0 .8rem;
 $topBottomPadding:	.8rem 0;
 
 .e-topbar {
- 	@include rem(margin, 0 0 1rem);
+ 	/*@include rem(margin, 0 0 1rem);*/
  	@include rem(padding, $allPadding);
 }
 

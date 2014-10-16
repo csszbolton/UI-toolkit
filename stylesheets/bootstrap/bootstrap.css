@@ -5963,7 +5963,8 @@ html {
   background: #ccc;
   background-color: #cccccc;
   width: calc(100% - 240px);
-  float: right; }
+  float: right;
+  padding-top: 56px; }
 
 .col-content-expanded {
   width: calc(100% - 35px);
@@ -5973,6 +5974,15 @@ html {
 
 .e-topbar {
   background: #DDD; }
+
+/* Fixed header */
+.navbar {
+  min-height: 0px;
+  border: none; }
+
+.navbar-fixed-top {
+  left: auto;
+  width: calc(100% - 240px); }
 
 /* UI container - the building block of the application */
 .ui-container .ui-c-config-control {
@@ -6155,13 +6165,8 @@ html {
     /*margin-left: 10px;*/ }
 
 /* about modal */
-#aboutModal .modal-dialog {
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 10px; }
-  #aboutModal .modal-dialog .modal-header span {
-    vertical-align: bottom;
-    padding-left: 10px; }
-  #aboutModal .modal-dialog .modal-footer {
-    text-align: left; }
+#aboutModal .modal-dialog .modal-header span {
+  vertical-align: bottom;
+  padding-left: 10px; }
+#aboutModal .modal-dialog .modal-footer {
+  text-align: left; }
