@@ -1,36 +1,39 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 		<div class="row">
-          <div class="col-xs-24 e-topbar">
-            <div class="row">
-              <div class="col-xs-12">
-				<ol class="e-breadcrumb">
-				  <li><a href="#">Grandparent</a></li>
-				  <li><a href="#">Parent</a></li>
-				  <li class="active">Current page</li>
-				</ol>
-              </div>
-              <div class="col-xs-12">
-              <div class="username-area">
-
-              	<span class="system">
-	              	<span class="sys-name">Local dev database</span>
-					<span class="sys-status-live">Live</span>
-				</span>
-				<div class="btn-group">
-				  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Name Surname <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu" role="menu">
-				    <li><a href="#">Account details</a></li>
-				    <li><a href="#">Customise UI</a></li>
-				    <li class="divider"></li>
-				    <li><a href="#">Log out</a></li>
-				  </ul>
-				</div>
-				</div>
-              </div>
-            </div>
+      <div class="col-xs-24 e-topbar">
+        <div class="row">
+          <div class="col-xs-8">
+						<ol class="e-breadcrumb">
+						  <li><a href="#">Grandparent</a></li>
+						  <li><a href="#">Parent</a></li>
+						  <li class="active">Current page</li>
+						</ol>
+          </div>
+          <div class="col-xs-8 system">
+            <span class="">
+            	<span class="sys-name">Local dev database</span>
+							<span class="sys-status-live">Live</span>
+						</span>
+					</div>
+        	<div class="col-xs-8">
+            <div class="username-area">
+							<div class="btn-group">
+							  <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Name Surname <span class="caret"></span>
+							  </button>
+							  <ul class="dropdown-menu" role="menu">
+							    <li><a href="#">Account details</a></li>
+							    <li><a href="#">Customise UI</a></li>
+							    <li class="divider"></li>
+							    <li><a href="#">Log out</a></li>							    
+							    <li class="divider"></li>
+							    <li><span data-toggle="modal" data-target="#aboutModal">About this application</span></li>
+							  </ul>
+							</div>
+						</div>
           </div>
         </div>
+      </div>
     </div>
+  </div>
 </nav>

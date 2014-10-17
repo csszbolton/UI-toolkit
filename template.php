@@ -21,8 +21,9 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.dataTables.min.css">
     
     <link rel="stylesheet" type="text/css" href="stylesheets/themes/default.css">
-    <link rel="stylesheet" type="text/css" id="switch-css" class="switch" href="">
+    <link rel="stylesheet" type="text/css" id="switch-css" class="switch" href="stylesheets/themes/blue.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/density/normal.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/density/comfortable.css">
     <link rel="stylesheet" type="text/css" id="switch-density" class="switch-css-density" href="">
     <script src="javascripts/jquery-1.11.1.min.js"></script>
     <script src="javascripts/jquerycookie.js"></script>
@@ -55,9 +56,6 @@
       <div class="col-content">
         <?php include("includes/topbar.html") ?>
         <div class="container-fluid">
-          <div class="row">
-           
-          </div>
           <div class="row">
            <?php include("includes/content.html") ?>
 

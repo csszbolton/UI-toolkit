@@ -1,2 +1,17 @@
-* {
-  padding: 20px !important; }
+.btn-lg {
+  padding: 15px 21px;
+  font-size: 20px;
+  line-height: 1.33;
+  border-radius: 6px; }
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 3px; }
+
+.btn-xs {
+  padding: 2px 6px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 3px; }

@@ -6044,6 +6044,7 @@ html {
 .navbar-default.sidebar {
   background-color: transparent;
   overflow-y: auto;
+  color: #e4e4e4;
   /*.arrow {
   	float: right;
   }*/ }
@@ -6136,8 +6137,6 @@ html {
   .left-footer p {
     margin: 0;
     font-size: 10px; }
-  .left-footer [data-toggle="modal"] {
-    cursor: pointer; }
 
 /* Header */
 .left-header .title {
@@ -6151,6 +6150,7 @@ html {
   height: 60px; }
 
 .system {
+  text-align: center;
   color: #e4e4e4;
   padding-bottom: 3px; }
   .system .sys-name, .system .sys-status-live {
@@ -6170,3 +6170,19 @@ html {
   padding-left: 10px; }
 #aboutModal .modal-dialog .modal-footer {
   text-align: left; }
+
+.username-area ul.dropdown-menu {
+  left: auto;
+  right: 0; }
+  .username-area ul.dropdown-menu [data-toggle="modal"] {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 3px 20px;
+    white-space: nowrap; }
+    .username-area ul.dropdown-menu [data-toggle="modal"]:hover {
+      background-color: whitesmoke; }
+    .username-area ul.dropdown-menu [data-toggle="modal"]:focus {
+      background-color: whitesmoke; }
+  .username-area ul.dropdown-menu .divider {
+    margin: 0; }

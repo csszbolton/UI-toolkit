@@ -1,0 +1,25 @@
+.username-area {
+	ul.dropdown-menu {
+		left: auto;
+		right: 0;
+
+		[data-toggle="modal"] {
+			cursor: pointer;
+			display: block;
+			width: 100%;
+			padding: 3px 20px;
+			white-space: nowrap;
+
+			&:hover {
+				background-color: whitesmoke;
+			}
+			&:focus {
+				background-color: whitesmoke;
+			}
+		}
+
+		.divider {
+			margin: 0;
+		}
+	}
+}
