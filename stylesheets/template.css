@@ -21,20 +21,20 @@ html {
 
 /* So we can have a fixed column for navigation and use bootstraps fluid scaling */
 .col-fixed {
-  width: 240px;
+  width: 260px;
   /* See variables.scss */
   float: left;
   background: #666666; }
 
 .col-fixed-collapsed {
-  width: 240px;
+  width: 260px;
   /* See variables.scss */
   float: left; }
 
 .col-content {
   background: #ccc;
   background-color: #cccccc;
-  width: calc(100% - 240px);
+  width: calc(100% - 260px);
   float: right;
   padding-top: 56px; }
 
@@ -54,7 +54,7 @@ html {
 
 .navbar-fixed-top {
   left: auto;
-  width: calc(100% - 240px); }
+  width: calc(100% - 260px); }
 
 /* UI container - the building block of the application */
 .ui-container .ui-c-config-control {

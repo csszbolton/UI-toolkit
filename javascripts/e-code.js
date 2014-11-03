@@ -58,5 +58,5 @@ $('.data-table').DataTable({
 
 // Magical line-height adjustments 
 
-/*var usernameAreaHeight = $('.username-area').height() + "px";
-$('.e-breadcrumb').css({"line-height":usernameAreaHeight});*/
+var usernameAreaHeight = $('.username-area').height() + "px";
+$('.e-breadcrumb').css({"line-height":usernameAreaHeight});

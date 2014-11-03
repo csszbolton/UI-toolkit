@@ -24,3 +24,6 @@ body {
     border-left: none; }
   .ui-container .ui-c-content {
     background: white; }
+
+.nav-search {
+  padding: 5px; }
