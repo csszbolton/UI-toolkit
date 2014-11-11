@@ -11,13 +11,11 @@ h1, h2, h3, h4, h5, h6,
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
   line-height: $headings-line-height;
-  //color: $headings-color; /* stripped out AB */
 
   small,
   .small {
     font-weight: normal;
     line-height: 1;
-    //color: $headings-small-color; /* stripped out AB */
   }
 }
 
@@ -62,8 +60,6 @@ p {
 .lead {
   margin-bottom: $line-height-computed;
   font-size: floor(($font-size-base * 1.15));
-  font-weight: 300;
-  line-height: 1.4;
 
   @media (min-width: $screen-sm-min) {
     font-size: ($font-size-base * 1.5);
@@ -80,14 +76,8 @@ small,
   font-size: floor((100% * $font-size-small / $font-size-base));
 }
 
-// Undo browser default styling
-cite {
-  font-style: normal;
-}
-
 mark,
 .mark {
-  //background-color: $state-warning-bg; /* stripped out AB */
   padding: .2em;
 }
 
@@ -98,44 +88,6 @@ mark,
 .text-justify        { text-align: justify; }
 .text-nowrap         { white-space: nowrap; }
 
-// Transformation
-.text-lowercase      { text-transform: lowercase; }
-.text-uppercase      { text-transform: uppercase; }
-.text-capitalize     { text-transform: capitalize; }
-
-// Contextual colors
-.text-muted {
-  //color: $text-muted; /* stripped out AB */
-}
-
-/*@include text-emphasis-variant('.text-primary', $brand-primary);
-
-@include text-emphasis-variant('.text-success', $state-success-text);
-
-@include text-emphasis-variant('.text-info', $state-info-text);
-
-@include text-emphasis-variant('.text-warning', $state-warning-text);
-
-@include text-emphasis-variant('.text-danger', $state-danger-text);*/  /* stripped out AB */
-
-// Contextual backgrounds
-// For now we'll leave these alongside the text classes until v4 when we can
-// safely shift things around (per SemVer rules).
-.bg-primary {
-  // Given the contrast here, this is the only class to have its color inverted
-  // automatically.
-  color: #fff;
-}
-/*@include bg-variant('.bg-primary', $brand-primary);
-
-@include bg-variant('.bg-success', $state-success-bg);
-
-@include bg-variant('.bg-info', $state-info-bg);
-
-@include bg-variant('.bg-warning', $state-warning-bg);
-
-@include bg-variant('.bg-danger', $state-danger-bg);*/ /* stripped out AB */
-
 
 // Page header
 // -------------------------
@@ -143,7 +95,6 @@ mark,
 .page-header {
   padding-bottom: (($line-height-computed / 2) - 1);
   margin: ($line-height-computed * 2) 0 $line-height-computed;
-  //border-bottom: 1px solid $page-header-border-color; /* stripped out AB */
 }
 
 
@@ -230,7 +181,6 @@ abbr[title],
 // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
 abbr[data-original-title] {
   cursor: help;
-  //border-bottom: 1px dotted $abbr-border-color; /* stripped out AB */
 }
 .initialism {
   font-size: 90%;
@@ -242,7 +192,6 @@ blockquote {
   padding: ($line-height-computed / 2) $line-height-computed;
   margin: 0 0 $line-height-computed;
   font-size: $blockquote-font-size;
-  //border-left: 5px solid $blockquote-border-color; /* stripped out AB */
 
   p,
   ul,
@@ -260,11 +209,6 @@ blockquote {
     display: block;
     font-size: 80%; // back to default font-size
     line-height: $line-height-base;
-    //color: $blockquote-small-color; /* stripped out AB */
-
-    &:before {
-      content: '\2014 \00A0'; // em dash, nbsp
-    }
   }
 }
 
@@ -275,25 +219,8 @@ blockquote {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  //border-right: 5px solid $blockquote-border-color; /* stripped out AB */
   border-left: 0;
   text-align: right;
-
-  // Account for citation
-  footer,
-  small,
-  .small {
-    &:before { content: ''; }
-    &:after {
-      content: '\00A0 \2014'; // nbsp, em dash
-    }
-  }
-}
-
-// Quotes
-blockquote:before,
-blockquote:after {
-  content: "";
 }
 
 // Addresses

@@ -1,8 +1,5 @@
 /* // Box Shadow
 $master-boxShadowVal: 1px, 1px, 1px, #000; */
-body {
-  background: #ccc; }
-
 .ui-container {
   background: white;
   /* 	@if $master-hasBoxShadow == true {

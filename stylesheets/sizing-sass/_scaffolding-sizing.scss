@@ -21,15 +21,13 @@
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  //-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
-  /*color: $text-color;*/ /* stripped out AB */
-  /*background-color: $body-bg;*/ /* stripped out AB */
 }
 
 // Reset fonts for relevant elements
@@ -46,18 +44,7 @@ textarea {
 // Links
 
 a {
-  /*color: $link-color;*/ /* stripped out AB */
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    //color: $link-hover-color; /* stripped out AB */
-    text-decoration: underline;
-  }
-
-  &:focus {
-    //@include tab-focus(); /* stripped out AB */
-  }
 }
 
 
@@ -93,8 +80,6 @@ img {
 .img-thumbnail {
   padding: $thumbnail-padding;
   line-height: $line-height-base;
-  //background-color: $thumbnail-bg; /* stripped out AB */
-  //border: 1px solid $thumbnail-border; /* stripped out AB */
   border-radius: $thumbnail-border-radius;
   @include transition(all .2s ease-in-out);
 
@@ -113,8 +98,6 @@ img {
 hr {
   margin-top:    $line-height-computed;
   margin-bottom: $line-height-computed;
-  border: 0;
-  //border-top: 1px solid $hr-border; /* stripped out AB */
 }
 
 
