@@ -11,12 +11,16 @@
      <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.10.0.custom.css">
 
     <!-- Bootstrap -->
-    <link href="stylesheets/bootstrap/bootstrap.css" rel="stylesheet">
+    <!-- <link href="stylesheets/bootstrap/bootstrap.css" rel="stylesheet"> -->
+
+    <!-- SASS splits of standard bootstrap
+    // Include either the <link> above or the two <link>s below -->
+    <link href="stylesheets/sizing-sass/bootstrap-sizing.css" rel="stylesheet">
+    <link href="stylesheets/theme-sass/bootstrap-theme.css" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/template.css">
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/template.css"> --> <!-- Removed as it's duplicated in bootstrap-theme.css -->
     <!-- <link rel="stylesheet" type="text/css" href="stylesheets/icomoon.css"> -->
-    <link rel="stylesheet" type="text/css" href="stylesheets/datepicker3.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/timepicker.css">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.dataTables.min.css">
     

@@ -1,0 +1,14 @@
+.username-area {
+	ul.dropdown-menu {
+
+		[data-toggle="modal"] {
+
+			&:hover {
+				background-color: whitesmoke;
+			}
+			&:focus {
+				background-color: whitesmoke;
+			}
+		}
+	}
+}

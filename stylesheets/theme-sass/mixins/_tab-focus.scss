@@ -1,0 +1,9 @@
+// WebKit-style focus
+
+@mixin tab-focus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 5px auto $brand-focus;
+  outline-offset: -2px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gradient headers</title>
+
+
+    <link href="stylesheets/sizing-sass/bootstrap-sizing.css" rel="stylesheet">
+    <link href="stylesheets/theme-sass/bootstrap-theme.css" rel="stylesheet">
+    
+    <style type="text/css">
+    .grad {
+        color: #005B82;
+        padding-left: 10px;
+        background-color: #D2EFFC;
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0.15, #FFFFFF),
+            color-stop(1, #A4E1FF)
+        );
+        background-image: -o-linear-gradient(bottom, #FFFFFF 15%, #A4E1FF 100%);
+        background-image: -moz-linear-gradient(bottom, #FFFFFF 15%, #A4E1FF 100%);
+        background-image: -webkit-linear-gradient(bottom, #FFFFFF 15%, #A4E1FF 100%);
+        background-image: -ms-linear-gradient(bottom, #FFFFFF 15%, #A4E1FF 100%);
+        background-image: linear-gradient(to bottom, #FFFFFF 15%, #A4E1FF 100%);
+    }
+    </style>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-24">
+                <h3 class="grad">Testing Gradient Background</h3>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
