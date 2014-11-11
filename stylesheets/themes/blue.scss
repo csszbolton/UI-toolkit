@@ -1,6 +1,50 @@
+// Core variables and mixins
 @import "variables-blue";
-@import "../bootstrap/mixins";
+@import "../theme-sass/mixins-theme";
+
+// Reset and dependencies
+@import "../theme-sass/normalize";
+@import "../theme-sass/print";
 
 // Core CSS
+@import "../theme-sass/scaffolding-theme";
+@import "../theme-sass/type-theme";
+@import "../theme-sass/code-theme";
+@import "../theme-sass/tables-theme";
+@import "../theme-sass/forms-theme";
+@import "../theme-sass/buttons-theme";
 
-@import "../bootstrap/buttons";
+// Components
+@import "../theme-sass/dropdowns-theme";
+@import "../theme-sass/button-groups";
+@import "../theme-sass/input-groups-theme";
+@import "../theme-sass/navs-theme";
+@import "../theme-sass/navbar-theme";
+@import "../theme-sass/breadcrumbs-theme";
+@import "../theme-sass/pagination-theme";
+@import "../theme-sass/pager-theme";
+@import "../theme-sass/labels";
+@import "../theme-sass/badges-theme";
+@import "../theme-sass/jumbotron-theme";
+@import "../theme-sass/thumbnails-theme";
+@import "../theme-sass/alerts-theme";
+@import "../theme-sass/progress-bars-theme";
+@import "../theme-sass/list-group-theme";
+@import "../theme-sass/panels-theme";
+@import "../theme-sass/wells-theme";
+@import "../theme-sass/close-theme";
+
+// Components w/ JavaScript
+@import "../theme-sass/modals-theme";
+@import "../theme-sass/tooltip-theme";
+@import "../theme-sass/popovers-theme";
+@import "../theme-sass/carousel-theme";
+
+// Utility classes
+@import "../theme-sass/utilities";
+@import "../theme-sass/responsive-utilities";
+
+// UIUX defaults
+@import "../template"; // !!! Needs spliting into Sizing & Theme specific SASS !!!
+@import "../theme-sass/nav-theme";
+@import "../theme-sass/profile-widget-theme";
