@@ -24,8 +24,6 @@
   padding: 10px 15px;
   // Place the border on the list items and negative margin up for better styling
   margin-bottom: -1px;
-  //background-color: $list-group-bg; /* stripped out AB */
-  //border: 1px solid $list-group-border; /* stripped out AB */
 
   // Round the first and last items
   &:first-child {
@@ -51,71 +49,19 @@
 // Use anchor elements instead of `li`s or `div`s to create linked list items.
 // Includes an extra `.active` modifier class for showing selected items.
 
-a.list-group-item {
-  //color: $list-group-link-color; /* stripped out AB */
 
-  .list-group-item-heading {
-    //color: $list-group-link-heading-color; /* stripped out AB */
-  }
-
-  // Hover state
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    //color: $list-group-link-hover-color; /* stripped out AB */
-    //background-color: $list-group-hover-bg; /* stripped out AB */
-  }
-}
 
 .list-group-item {
-  // Disabled state
-  &.disabled,
-  &.disabled:hover,
-  &.disabled:focus {
-    //background-color: $list-group-disabled-bg; /* stripped out AB */
-    //color: $list-group-disabled-color; /* stripped out AB */
-
-    // Force color to inherit for custom content
-    .list-group-item-heading {
-      color: inherit;
-    }
-    .list-group-item-text {
-      //color: $list-group-disabled-text-color; /* stripped out AB */
-    }
-  }
+ 
 
   // Active class on item itself, not parent
   &.active,
   &.active:hover,
   &.active:focus {
     z-index: 2; // Place active items above their siblings for proper border styling
-    //color: $list-group-active-color; /* stripped out AB */
-    //background-color: $list-group-active-bg; /* stripped out AB */
-    //border-color: $list-group-active-border; /* stripped out AB */
-
-    // Force color to inherit for custom content
-    .list-group-item-heading,
-    .list-group-item-heading > small,
-    .list-group-item-heading > .small {
-      color: inherit;
-    }
-    .list-group-item-text {
-      //color: $list-group-active-text-color; /* stripped out AB */
-    }
   }
 }
 
-
-// Contextual variants
-//
-// Add modifier classes to change text and background color on individual items.
-// Organizationally, this must come after the `:hover` states.
-/*
-@include list-group-item-variant(success, $state-success-bg, $state-success-text);
-@include list-group-item-variant(info, $state-info-bg, $state-info-text);
-@include list-group-item-variant(warning, $state-warning-bg, $state-warning-text);
-@include list-group-item-variant(danger, $state-danger-bg, $state-danger-text);
-*/ /* stripped out AB */
 
 // Custom content options
 //

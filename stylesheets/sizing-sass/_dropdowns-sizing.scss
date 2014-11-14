@@ -10,9 +10,9 @@
   height: 0;
   margin-left: 2px;
   vertical-align: middle;
-  border-top:   $caret-width-base solid; /* stripped out AB */
-  border-right: $caret-width-base solid transparent; /* stripped out AB */
-  border-left:  $caret-width-base solid transparent; /* stripped out AB */
+  border-top:   $caret-width-base solid;
+  border-right: $caret-width-base solid transparent;
+  border-left:  $caret-width-base solid transparent;
 }
 
 // The dropdown wrapper (div)
@@ -39,9 +39,6 @@
   list-style: none;
   font-size: $font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  //background-color: $dropdown-bg; /* stripped out AB */
-  //border: 1px solid $dropdown-fallback-border; // IE8 fallback /* stripped out AB */
-  //border: 1px solid $dropdown-border; /* stripped out AB */
   border-radius: $border-radius-base;
   @include box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
@@ -54,11 +51,6 @@
     left: auto;
   }
 
-  // Dividers (basically an hr) within the dropdown
-  .divider {
-    //@include nav-divider($dropdown-divider-bg); /* stripped out AB */
-  }
-
   // Links within the dropdown menu
   > li > a {
     display: block;
@@ -66,55 +58,21 @@
     clear: both;
     font-weight: normal;
     line-height: $line-height-base;
-    //color: $dropdown-link-color; /* stripped out AB */
     white-space: nowrap; // prevent links from randomly breaking onto new lines
   }
 }
 
-// Hover/Focus state
-.dropdown-menu > li > a {
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    //color: $dropdown-link-hover-color; /* stripped out AB */
-    //background-color: $dropdown-link-hover-bg; /* stripped out AB */
-  }
-}
 
 // Active state
 .dropdown-menu > .active > a {
   &,
   &:hover,
   &:focus {
-    //color: $dropdown-link-active-color; /* stripped out AB */
     text-decoration: none;
     outline: 0;
-    //background-color: $dropdown-link-active-bg; /* stripped out AB */
   }
 }
 
-// Disabled state
-//
-// Gray out text and ensure the hover/focus state remains gray
-
-.dropdown-menu > .disabled > a {
-  &,
-  &:hover,
-  &:focus {
-    //color: $dropdown-link-disabled-color; /* stripped out AB */
-  }
-}
-// Nuke hover/focus effects
-.dropdown-menu > .disabled > a {
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    background-color: transparent;
-    background-image: none; // Remove CSS gradient
-    //@include reset-filter(); /* stripped out AB */
-    cursor: not-allowed;
-  }
-}
 
 // Open state for the dropdown
 .open {
@@ -154,7 +112,6 @@
   padding: 3px 20px;
   font-size: $font-size-small;
   line-height: $line-height-base;
-  //color: $dropdown-header-color; /* stripped out AB */
   white-space: nowrap; // as with > li > a
 }
 
@@ -183,9 +140,7 @@
 .navbar-fixed-bottom .dropdown {
   // Reverse the caret
   .caret {
-    border-top: 0;
-    border-bottom: $caret-width-base solid; /* stripped out AB */
-    content: "";
+    border-bottom: $caret-width-base solid;
   }
   // Different positioning for bottom up menu
   .dropdown-menu {
@@ -212,4 +167,3 @@
     }
   }
 }
-

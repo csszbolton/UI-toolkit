@@ -2,37 +2,13 @@
 // Pagination (multiple pages)
 // --------------------------------------------------
 .pagination {
-  display: inline-block;
-  padding-left: 0;
-  //margin: $line-height-computed 0; /* stripped out AB */
-  //border-radius: $border-radius-base; /* stripped out AB */
 
   > li {
-    display: inline; // Remove list-style and block-level defaults
     > a,
     > span {
-      position: relative;
-      float: left; // Collapse white-space
-      //padding: $padding-base-vertical $padding-base-horizontal; /* stripped out AB */
-      //line-height: $line-height-base; /* stripped out AB */
-      text-decoration: none;
       color: $pagination-color;
       background-color: $pagination-bg;
       border: 1px solid $pagination-border;
-      margin-left: -1px;
-    }
-    &:first-child {
-      > a,
-      > span {
-        margin-left: 0;
-        //@include border-left-radius($border-radius-base); /* stripped out AB */
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        //@include border-right-radius($border-radius-base); /* stripped out AB */
-      }
     }
   }
 
@@ -73,17 +49,3 @@
     }
   }
 }
-
-// Sizing
-// --------------------------------------------------
-/*
-// Large
-.pagination-lg {
-  @include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
-}
-
-// Small
-.pagination-sm {
-  @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
-}
-*/ /* stripped out AB */

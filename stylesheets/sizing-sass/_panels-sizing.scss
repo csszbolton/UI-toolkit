@@ -6,10 +6,7 @@
 // Base class
 .panel {
   margin-bottom: $line-height-computed;
-  //background-color: $panel-bg; /* stripped out AB */
-  //border: 1px solid transparent; /* stripped out AB */
   border-radius: $panel-border-radius;
-  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
 }
 
 // Panel contents
@@ -21,12 +18,7 @@
 // Optional heading
 .panel-heading {
   padding: $panel-heading-padding;
-  border-bottom: 1px solid transparent;
   @include border-top-radius(($panel-border-radius - 1));
-
-  > .dropdown .dropdown-toggle {
-    color: inherit;
-  }
 }
 
 // Within heading, strip any `h*` tag of its default margins for spacing.
@@ -34,18 +26,11 @@
   margin-top: 0;
   margin-bottom: 0;
   font-size: ceil(($font-size-base * 1.125));
-  color: inherit;
-
-  > a {
-    color: inherit;
-  }
 }
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
   padding: $panel-footer-padding;
-  //background-color: $panel-footer-bg; /* stripped out AB */
-  //border-top: 1px solid $panel-inner-border; /* stripped out AB */
   @include border-bottom-radius(($panel-border-radius - 1));
 }
 
@@ -139,52 +124,8 @@
       }
     }
   }
-  > .panel-body + .table,
-  > .panel-body + .table-responsive {
-    //border-top: 1px solid $table-border-color; /* stripped out AB */
-  }
-  > .table > tbody:first-child > tr:first-child th,
-  > .table > tbody:first-child > tr:first-child td {
-    border-top: 0;
-  }
-  > .table-bordered,
-  > .table-responsive > .table-bordered {
-    border: 0;
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th:first-child,
-        > td:first-child {
-          border-left: 0;
-        }
-        > th:last-child,
-        > td:last-child {
-          border-right: 0;
-        }
-      }
-    }
-    > thead,
-    > tbody {
-      > tr:first-child {
-        > td,
-        > th {
-          border-bottom: 0;
-        }
-      }
-    }
-    > tbody,
-    > tfoot {
-      > tr:last-child {
-        > td,
-        > th {
-          border-bottom: 0;
-        }
-      }
-    }
-  }
+
   > .table-responsive {
-    border: 0;
     margin-bottom: 0;
   }
 }
@@ -206,39 +147,4 @@
       margin-top: 5px;
     }
   }
-
-  .panel-heading {
-    border-bottom: 0;
-    + .panel-collapse > .panel-body {
-      //border-top: 1px solid $panel-inner-border; /* stripped out AB */
-    }
-  }
-  .panel-footer {
-    border-top: 0;
-    + .panel-collapse .panel-body {
-      //border-bottom: 1px solid $panel-inner-border; /* stripped out AB */
-    }
-  }
 }
-
-/*
-// Contextual variations
-.panel-default {
-  @include panel-variant($panel-default-border, $panel-default-text, $panel-default-heading-bg, $panel-default-border);
-}
-.panel-primary {
-  @include panel-variant($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
-}
-.panel-success {
-  @include panel-variant($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
-}
-.panel-info {
-  @include panel-variant($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
-}
-.panel-warning {
-  @include panel-variant($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
-}
-.panel-danger {
-  @include panel-variant($panel-danger-border, $panel-danger-text, $panel-danger-heading-bg, $panel-danger-border);
-}
-*/ /* stripped out AB */

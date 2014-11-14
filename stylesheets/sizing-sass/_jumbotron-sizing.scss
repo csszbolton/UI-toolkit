@@ -6,21 +6,11 @@
 .jumbotron {
   padding: $jumbotron-padding;
   margin-bottom: $jumbotron-padding;
-  //color: $jumbotron-color; /* stripped out AB */
-  //background-color: $jumbotron-bg; /* stripped out AB */
 
-  h1,
-  .h1 {
-    //color: $jumbotron-heading-color; /* stripped out AB */
-  }
   p {
     margin-bottom: ($jumbotron-padding / 2);
     font-size: $jumbotron-font-size;
     font-weight: 200;
-  }
-
-  > hr {
-    //border-top-color: darken($jumbotron-bg, 10%); /* stripped out AB */
   }
 
   .container & {

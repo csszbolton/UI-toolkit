@@ -19,17 +19,10 @@
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
   @include user-select(none);
 
-  &,
-  &:active,
-  &.active {
-    &:focus {
-      //@include tab-focus(); /* stripped out AB */
-    }
-  }
+  
 
   &:hover,
   &:focus {
-    //color: $btn-default-color; /* stripped out AB */
     text-decoration: none;
   }
 
@@ -45,45 +38,17 @@
   fieldset[disabled] & {
     cursor: not-allowed;
     pointer-events: none; // Future-proof disabling of clicks
-    //@include opacity(.65); /* stripped out AB */
     @include box-shadow(none);
   }
 }
 
 
-// Alternate buttons
-// --------------------------------------------------
-/*
-.btn-default {
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
-}
-.btn-primary {
-  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
-}
-// Success appears as green
-.btn-success {
-  @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
-}
-// Info appears as blue-green
-.btn-info {
-  @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
-}
-// Warning appears as orange
-.btn-warning {
-  @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
-}
-// Danger and error appear as red
-.btn-danger {
-  @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
-}
-*/ /* stripped out AB */
 
 // Link buttons
 // -------------------------
 
 // Make a button look and behave like a link
 .btn-link {
-  //color: $link-color; /* stripped out AB */
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -103,7 +68,6 @@
   }
   &:hover,
   &:focus {
-    //color: $link-hover-color; /* stripped out AB */
     text-decoration: underline;
     background-color: transparent;
   }
@@ -111,7 +75,6 @@
   fieldset[disabled] & {
     &:hover,
     &:focus {
-      //color: $btn-link-disabled-color; /* stripped out AB */
       text-decoration: none;
     }
   }

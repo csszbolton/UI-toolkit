@@ -15,15 +15,7 @@
     > span {
       display: inline-block;
       padding: 5px 14px;
-      //background-color: $pager-bg; /* stripped out AB */
-      //border: 1px solid $pager-border; /* stripped out AB */
       border-radius: $pager-border-radius;
-    }
-
-    > a:hover,
-    > a:focus {
-      text-decoration: none;
-      //background-color: $pager-hover-bg; /* stripped out AB */
     }
   }
 
@@ -40,16 +32,4 @@
       float: left;
     }
   }
-
-  .disabled {
-    > a,
-    > a:hover,
-    > a:focus,
-    > span {
-      //color: $pager-disabled-color; /* stripped out AB */
-      //background-color: $pager-bg; /* stripped out AB */
-      cursor: not-allowed;
-    }
-  }
-
 }

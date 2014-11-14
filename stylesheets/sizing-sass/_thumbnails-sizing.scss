@@ -9,8 +9,6 @@
   padding: $thumbnail-padding;
   margin-bottom: $line-height-computed;
   line-height: $line-height-base;
-  //background-color: $thumbnail-bg; /* stripped out AB */
-  //border: 1px solid $thumbnail-border; /* stripped out AB */
   border-radius: $thumbnail-border-radius;
   @include transition(all .2s ease-in-out);
 
@@ -26,13 +24,5 @@
   // Image captions
   .caption {
     padding: $thumbnail-caption-padding;
-    //color: $thumbnail-caption-color; /* stripped out AB */
   }
-}
-
-// Add a hover state for linked versions only
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail.active {
-  //border-color: $link-color; /* stripped out AB */
 }

@@ -4,8 +4,6 @@
 
 
 .jumbotron {
-  //padding: $jumbotron-padding; /* stripped out AB */
-  //margin-bottom: $jumbotron-padding; /* stripped out AB */
   color: $jumbotron-color;
   background-color: $jumbotron-bg;
 
@@ -13,36 +11,8 @@
   .h1 {
     color: $jumbotron-heading-color;
   }
-  p {
-    //margin-bottom: ($jumbotron-padding / 2); /* stripped out AB */
-    //font-size: $jumbotron-font-size; /* stripped out AB */
-    font-weight: 200;
-  }
 
   > hr {
     border-top-color: darken($jumbotron-bg, 10%);
   }
-
-  .container & {
-    //border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container /* stripped out AB */
-  }
-
-  .container {
-    max-width: 100%;
-  }
-  /*
-  @media screen and (min-width: $screen-sm-min) {
-    padding-top:    ($jumbotron-padding * 1.6);
-    padding-bottom: ($jumbotron-padding * 1.6);
-
-    .container & {
-      padding-left:  ($jumbotron-padding * 2);
-      padding-right: ($jumbotron-padding * 2);
-    }
-
-    h1,
-    .h1 {
-      font-size: ($font-size-base * 4.5);
-    }
-  }*/ /* stripped out AB */
 }

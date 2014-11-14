@@ -12,12 +12,8 @@
   max-width: $popover-max-width;
   padding: 1px;
   text-align: left; // Reset given new insertion method
-  //background-color: $popover-bg; /* Stripped out AB */
   background-clip: padding-box;
-  //border: 1px solid $popover-fallback-border-color; /* Stripped out AB */
-  //border: 1px solid $popover-border-color; /* Stripped out AB */
   border-radius: $border-radius-large;
-  @include box-shadow(0 5px 10px rgba(0,0,0,.2));
 
   // Overrides for proper insertion
   white-space: normal;
@@ -35,8 +31,6 @@
   font-size: $font-size-base;
   font-weight: normal;
   line-height: 18px;
-  //background-color: $popover-title-bg; /* Stripped out AB */
-  //border-bottom: 1px solid darken($popover-title-bg, 5%); /* Stripped out AB */
   border-radius: ($border-radius-large - 1) ($border-radius-large - 1) 0 0;
 }
 
@@ -55,8 +49,6 @@
     display: block;
     width: 0;
     height: 0;
-    border-color: transparent;
-    border-style: solid;
   }
 }
 .popover > .arrow {
@@ -64,53 +56,34 @@
 }
 .popover > .arrow:after {
   border-width: $popover-arrow-width;
-  content: "";
 }
 
 .popover {
   &.top > .arrow {
     left: 50%;
     margin-left: -$popover-arrow-outer-width;
-    border-bottom-width: 0;
-    //border-top-color: $popover-arrow-outer-fallback-color; // IE8 fallback /* Stripped out AB */
-    //border-top-color: $popover-arrow-outer-color; /* Stripped out AB */
     bottom: -$popover-arrow-outer-width;
     &:after {
-      content: " ";
       bottom: 1px;
       margin-left: -$popover-arrow-width;
-      border-bottom-width: 0;
-      //border-top-color: $popover-arrow-color; /* Stripped out AB */
     }
   }
   &.right > .arrow {
     top: 50%;
     left: -$popover-arrow-outer-width;
     margin-top: -$popover-arrow-outer-width;
-    border-left-width: 0;
-    //border-right-color: $popover-arrow-outer-fallback-color; // IE8 fallback /* Stripped out AB */
-    //border-right-color: $popover-arrow-outer-color; /* Stripped out AB */
     &:after {
-      content: " ";
       left: 1px;
       bottom: -$popover-arrow-width;
-      border-left-width: 0;
-      //border-right-color: $popover-arrow-color; /* Stripped out AB */
     }
   }
   &.bottom > .arrow {
     left: 50%;
     margin-left: -$popover-arrow-outer-width;
-    border-top-width: 0;
-    //border-bottom-color: $popover-arrow-outer-fallback-color; // IE8 fallback /* Stripped out AB */
-    //border-bottom-color: $popover-arrow-outer-color; /* Stripped out AB */
     top: -$popover-arrow-outer-width;
     &:after {
-      content: " ";
       top: 1px;
       margin-left: -$popover-arrow-width;
-      border-top-width: 0;
-      //border-bottom-color: $popover-arrow-color; /* Stripped out AB */
     }
   }
 
@@ -118,14 +91,8 @@
     top: 50%;
     right: -$popover-arrow-outer-width;
     margin-top: -$popover-arrow-outer-width;
-    border-right-width: 0;
-    //border-left-color: $popover-arrow-outer-fallback-color; // IE8 fallback /* Stripped out AB */
-    //border-left-color: $popover-arrow-outer-color; /* Stripped out AB */
     &:after {
-      content: " ";
       right: 1px;
-      border-right-width: 0;
-      //border-left-color: $popover-arrow-color; /* Stripped out AB */
       bottom: -$popover-arrow-width;
     }
   }

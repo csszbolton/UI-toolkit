@@ -28,9 +28,7 @@
   overflow: hidden;
   height: $line-height-computed;
   margin-bottom: $line-height-computed;
-  //background-color: $progress-bg; /* stripped out AB */
   border-radius: $border-radius-base;
-  @include box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
 }
 
 // Bar of progress
@@ -40,11 +38,7 @@
   height: 100%;
   font-size: $font-size-small;
   line-height: $line-height-computed;
-  //color: $progress-bar-color; /* stripped out AB */
   text-align: center;
-  //background-color: $progress-bar-bg; /* stripped out AB */
-  @include box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
-  @include transition(width .6s ease);
 }
 
 // Striped bars
@@ -54,17 +48,7 @@
 // `.progress-bar`.
 .progress-striped .progress-bar,
 .progress-bar-striped {
-  //@include gradient-striped(); /* stripped out AB */
   background-size: 40px 40px;
-}
-
-// Call animation for the active one
-//
-// `.progress.active .progress-bar` is deprecated as of v3.2.0 in favor of the
-// `.progress-bar.active` approach.
-.progress.active .progress-bar,
-.progress-bar.active {
-  @include animation(progress-bar-stripes 2s linear infinite);
 }
 
 // Account for lower percentages
@@ -75,32 +59,6 @@
   }
 
   &[aria-valuenow="0"] {
-    //color: $gray-light; /* stripped out AB */
     min-width: 30px;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
   }
 }
-
-
-
-// Variations
-// -------------------------
-/*
-.progress-bar-success {
-  @include progress-bar-variant($progress-bar-success-bg);
-}
-
-.progress-bar-info {
-  @include progress-bar-variant($progress-bar-info-bg);
-}
-
-.progress-bar-warning {
-  @include progress-bar-variant($progress-bar-warning-bg);
-}
-
-.progress-bar-danger {
-  @include progress-bar-variant($progress-bar-danger-bg);
-}
-*/ /* stripped out AB */
