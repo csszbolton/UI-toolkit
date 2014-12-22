@@ -24,7 +24,7 @@ html {
   width: 260px;
   /* See variables.scss */
   float: left;
-  background: #666666; }
+  background: #666; }
 
 .col-fixed-collapsed {
   width: 260px;
@@ -35,8 +35,7 @@ html {
   background: #ccc;
   background-color: #cccccc;
   width: calc(100% - 260px);
-  float: right;
-  padding-top: 56px; }
+  float: right; }
 
 .col-content-expanded {
   width: calc(100% - 35px);
@@ -83,3 +82,14 @@ html {
 /* Username */
 .username-area {
   text-align: right; }
+
+.el-header {
+  height: 50px;
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%; }
+
+/*# sourceMappingURL=template.css.map */

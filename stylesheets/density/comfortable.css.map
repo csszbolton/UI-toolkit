@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAyCA,OAAQ;EALN,OAAO,EAAE,SAAqC;EAC9C,SAAS,EAhCe,IAA8B;EAiCtD,WAAW,EAde,IAAI;EAe9B,aAAa,EAXa,GAAG;;AAiB/B,OAAQ;EATN,OAAO,EAAE,QAAqC;EAC9C,SAAS,EA/Be,IAA8B;EAgCtD,WAAW,EAbe,GAAG;EAc7B,aAAa,EAVa,GAAG;;AAoB/B,OAAQ;EAbN,OAAO,EAAE,OAAqC;EAC9C,SAAS,EA/Be,IAA8B;EAgCtD,WAAW,EAbe,GAAG;EAc7B,aAAa,EAVa,GAAG",
+"sources": ["comfortable.scss"],
+"names": [],
+"file": "comfortable.css"
+}

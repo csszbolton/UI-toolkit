@@ -45,9 +45,8 @@
 
   </head>
   <body id="top">
-
+    <?php include ("includes/header.html") ?>
       <div class="col-fixed">
-        <?php include("includes/branding.html") ?>
         
         <!-- <div class="col-expander">
           <span class="icon-bar"></span>
@@ -60,7 +59,6 @@
         <?php include("includes/footer.html") ?>
       </div>
       <div class="col-content">
-        <?php include("includes/topbar.html") ?>
         <div class="container-fluid">
           <div class="row">
            <?php include("includes/content.html") ?>

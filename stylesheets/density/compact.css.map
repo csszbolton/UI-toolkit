@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,CAAE;EACD,OAAO,EAAE,cAAc",
+"sources": ["compact.scss"],
+"names": [],
+"file": "compact.css"
+}

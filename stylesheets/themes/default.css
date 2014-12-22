@@ -1,7 +1,7 @@
 /* // Box Shadow
 $master-boxShadowVal: 1px, 1px, 1px, #000; */
 .ui-container {
-  background: white;
+  background: #fff;
   /* 	@if $master-hasBoxShadow == true {
   	@include box-shadow($master-boxShadowVal);
   } */ }
@@ -9,7 +9,7 @@ $master-boxShadowVal: 1px, 1px, 1px, #000; */
     background: #a5d9f8;
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #CCC;
     border-left: none; }
     .ui-container .ui-c-header h2 {
       text-transform: uppercase; }
@@ -17,10 +17,12 @@ $master-boxShadowVal: 1px, 1px, 1px, #000; */
     background: #efefef;
     border-top: none;
     border-right: none;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #CCC;
     border-left: none; }
   .ui-container .ui-c-content {
-    background: white; }
+    background: #fff; }
 
 .nav-search {
   padding: 5px; }
+
+/*# sourceMappingURL=default.css.map */

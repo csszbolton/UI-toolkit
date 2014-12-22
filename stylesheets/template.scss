@@ -54,7 +54,6 @@ $colFixedBGcolor: #666;
 	background-color: #cccccc;
 	width:calc(100% - #{$colFixedWidth}); 
 	float: right;
-	padding-top: 56px;
 }
 
 .col-content-expanded {
@@ -139,4 +138,14 @@ $colFixedBGcolor: #666;
 
 .username-area {
 	text-align: right;
+}
+
+.el-header {
+	height: 50px;
+	background: red;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
 }
