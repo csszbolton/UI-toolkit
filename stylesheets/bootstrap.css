@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: bootstrap/variables.
-       Load path: C:/wamp/www/cssui/UI-toolkit/stylesheets
-        on line 2 of C:\wamp\www\cssui\UI-toolkit\stylesheets\bootstrap.scss
+       Load path: C:/wamp/www/UI-toolkit/stylesheets
+        on line 2 of C:\wamp\www\UI-toolkit\stylesheets\bootstrap.scss
 
 1: // Core variables and mixins
 2: @import "bootstrap/variables";
@@ -12,7 +12,7 @@ Error: File to import not found or unreadable: bootstrap/variables.
 7: @import "bootstrap/print";
 
 Backtrace:
-C:\wamp\www\cssui\UI-toolkit\stylesheets\bootstrap.scss:2
+C:\wamp\www\UI-toolkit\stylesheets\bootstrap.scss:2
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -50,4 +50,4 @@ C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: bootstrap/variables.\A        Load path: C:/wamp/www/cssui/UI-toolkit/stylesheets\A         on line 2 of C:\wamp\www\cssui\UI-toolkit\stylesheets\bootstrap.scss\A \A 1: // Core variables and mixins\A 2: @import \"bootstrap/variables\";\A 3: @import \"bootstrap/mixins\";\A 4: \A 5: // Reset and dependencies\A 6: @import \"bootstrap/normalize\";\A 7: @import \"bootstrap/print\";"; }
+  content: "Error: File to import not found or unreadable: bootstrap/variables.\A        Load path: C:/wamp/www/UI-toolkit/stylesheets\A         on line 2 of C:\wamp\www\UI-toolkit\stylesheets\bootstrap.scss\A \A 1: // Core variables and mixins\A 2: @import \"bootstrap/variables\";\A 3: @import \"bootstrap/mixins\";\A 4: \A 5: // Reset and dependencies\A 6: @import \"bootstrap/normalize\";\A 7: @import \"bootstrap/print\";"; }

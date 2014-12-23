@@ -1986,6 +1986,9 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+body {
+  background: #36393f; }
+
 html {
   overflow-x: hidden;
   -ms-overflow-style: scrollbar; }
@@ -2012,7 +2015,8 @@ html {
   width: 260px;
   /* See variables.scss */
   float: left;
-  background: #666; }
+  background: #36393f;
+  border-right: 5px solid #2d3036; }
 
 .col-fixed-collapsed {
   width: 260px;
@@ -2020,8 +2024,6 @@ html {
   float: left; }
 
 .col-content {
-  background: #ccc;
-  background-color: #cccccc;
   width: calc(100% - 260px);
   float: right; }
 
@@ -2044,10 +2046,13 @@ html {
   width: calc(100% - 260px); }
 
 /* UI container - the building block of the application */
-.ui-container .ui-c-config-control {
-  text-align: right; }
-.ui-container h2 {
-  display: inline; }
+.ui-container {
+  background: #2D3036;
+  color: #fff; }
+  .ui-container .ui-c-config-control {
+    text-align: right; }
+  .ui-container h2 {
+    display: inline; }
 
 /* Moveable items */
 .move-handler:hover {
@@ -2073,12 +2078,31 @@ html {
 
 .el-header {
   height: 50px;
-  background: red;
+  background: #222529;
+  color: #FFF;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%; }
+
+.el-header-inner {
+  position: relative;
+  height: 50px;
+  width: 100%; }
+
+hr.el-hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #111315;
+  border-bottom: 1px solid #4e535c;
+  clear: both;
+  margin: 0; }
+
+hr.hr-header {
+  position: relative;
+  top: 50px;
+  left: 0; }
 
 .col-fixed .branding {
   background-image: url(../../images/logo-sm.png);
@@ -2120,16 +2144,16 @@ html {
     .navbar-default.sidebar #side-menu ul.nav.nav-second-level.collapse,
     .navbar-default.sidebar #side-menu ul.nav.nav-second-level.collapsing {
       border-bottom: solid 1px #ddd;
-      background-color: #595959; }
+      background-color: #2a2d31; }
     .navbar-default.sidebar #side-menu ul.nav.nav-third-level.collapse,
     .navbar-default.sidebar #side-menu ul.nav.nav-third-level.collapsing {
-      background-color: #4d4d4d; }
+      background-color: #1e2024; }
     .navbar-default.sidebar #side-menu ul.nav.nav-fourth-level.collapse,
     .navbar-default.sidebar #side-menu ul.nav.nav-fourth-level.collapsing {
-      background-color: #404040; }
+      background-color: #131416; }
     .navbar-default.sidebar #side-menu ul.nav.nav-fifth-level.collapse,
     .navbar-default.sidebar #side-menu ul.nav.nav-fifth-level.collapsing {
-      background-color: #333333; }
+      background-color: #070708; }
     .navbar-default.sidebar #side-menu #cloud-nav li a {
       background-color: #B35009;
       color: #ffffff; }

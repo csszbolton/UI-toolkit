@@ -60,3 +60,20 @@ $('.data-table').DataTable({
 
 var usernameAreaHeight = $('.username-area').height() + "px";
 $('.e-breadcrumb').css({"line-height":usernameAreaHeight});
+
+// Initiate tree menu js
+$('#side-menu').metisMenu({
+  toggle: false
+});
+
+function navbarHeight() {
+var otherHeight = $('.left-footer').outerHeight() + 50;
+var paneHeight = $(window).height() - otherHeight;
+$('.navbar-default.sidebar').css({
+  'height': paneHeight
+});
+console.log($('.left-header').outerHeight());
+}
+
+navbarHeight();
+$(window).resize(navbarHeight);

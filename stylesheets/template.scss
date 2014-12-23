@@ -1,3 +1,7 @@
+body {
+	background: #36393f;
+}
+
 html {
 	overflow-x: hidden;
 	-ms-overflow-style: scrollbar;
@@ -36,12 +40,13 @@ html {
 
 $colFixedWidth: 260px;
 $colFixedWidthCollapsed: 260px;
-$colFixedBGcolor: #666;
+$colFixedBGcolor: #36393f;
 
 .col-fixed {
 	width: $colFixedWidth; /* See variables.scss */
 	float: left;
 	background: $colFixedBGcolor;
+	border-right: 5px solid #2d3036;
 }
 
 .col-fixed-collapsed {
@@ -50,8 +55,6 @@ $colFixedBGcolor: #666;
 }
 
 .col-content {
-	background: #ccc;
-	background-color: #cccccc;
 	width:calc(100% - #{$colFixedWidth}); 
 	float: right;
 }
@@ -83,7 +86,8 @@ $colFixedBGcolor: #666;
 
 
 .ui-container {
-
+	background: #2D3036;
+	color: #fff;
 
 	.ui-c-header {
 
@@ -142,10 +146,32 @@ $colFixedBGcolor: #666;
 
 .el-header {
 	height: 50px;
-	background: red;
+	background: #222529;
+	color: #FFF;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
 	width: 100%;
+}
+
+.el-header-inner {
+	position: relative;
+	height: 50px;
+	width: 100%;
+}
+
+hr.el-hr { 
+	border: 0;
+	height: 0;
+	border-top: 1px solid #111315;
+	border-bottom: 1px solid #4e535c;
+	clear: both;
+	margin: 0;
+}
+
+hr.hr-header {
+	position: relative;
+	top: 50px;
+	left: 0;
 }
